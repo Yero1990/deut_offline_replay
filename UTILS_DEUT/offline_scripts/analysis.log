@@ -1,0 +1,554 @@
+HCREPLAY=/home/gvill/deuteron/deut_offline_replay
+
+:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:
+
+changing to the top-level directory . . .
+cd /home/gvill/deuteron/deut_offline_replay
+
+:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:
+
+
+:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=
+
+Thu Jul  6 11:08:23 AM EDT 2023
+
+
+Running HCANA Deut Replay on the run 20841:
+ -> SCRIPT:  /home/gvill/deuteron/deut_offline_replay/SCRIPTS/COIN/PRODUCTION/replay_deut.C
+ -> RUN:     20841
+ -> NEVENTS: 10000
+ -> COMMAND: ./hcana -q "/home/gvill/deuteron/deut_offline_replay/SCRIPTS/COIN/PRODUCTION/replay_deut.C(20841, 10000, \"prod\")"
+
+:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=
+DB_DIR set to DBASE
+  ************************************************
+  *                                              *
+  *            W E L C O M E  to  the            *
+  *          H A L L C ++  A N A L Y Z E R       *
+  *                                              *
+  *  hcana release       0.95.0  Wed Jun 07 2023 *
+  *  PODD release         1.7.3       8 Sep 2022 *
+  *  ROOT               6.28/04       May 8 2023 *
+  *                                              *
+  *            For information visit             *
+  *      http://hallcweb.jlab.org/hcana/docs/    *
+  *                                              *
+  ************************************************
+
+Processing /home/gvill/deuteron/deut_offline_replay/SCRIPTS/COIN/PRODUCTION/replay_deut.C(20841, 10000, "prod")...
+Opening parameter file: [0] DBASE/COIN/standard.database
+Reading Parameters for run 20841
+Opening parameter file: [0] DBASE/COIN/GEN/general_deut_spring23.param
+Opening parameter file: [1] PARAM/TRIG/spring23/tcoin_init.param
+Opening parameter file: [1] PARAM/GEN/genflags.param
+Opening parameter file: [1] PARAM/GEN/gdebug.param
+Opening parameter file: [1] PARAM/GEN/gtarget.param
+Opening parameter file: [1] PARAM/GEN/gbeam.param
+Opening parameter file: [1] PARAM/GEN/gscalers.param
+Opening parameter file: [1] PARAM/HMS/GEN/spring23/hcana_init.param
+Opening parameter file: [1] PARAM/HMS/GEN/spring23/hdebug.param
+Opening parameter file: [1] PARAM/HMS/GEN/spring23/h_fadc_debug.param
+Opening parameter file: [1] PARAM/HMS/GEN/spring23/hmsflags_init.param
+Opening parameter file: [1] PARAM/HMS/GEN/spring23/htracking_init.param
+Opening parameter file: [1] PARAM/HMS/GEN/spring23/h_reftime_cut_init.param
+Opening parameter file: [1] PARAM/HMS/CER/hcer_geom.param
+Opening parameter file: [1] PARAM/HMS/DC/hdc_geom.param
+Opening parameter file: [1] PARAM/HMS/HODO/hhodo_geom.param
+Opening parameter file: [1] PARAM/HMS/AERO/haero_geom.param
+Opening parameter file: [1] PARAM/HMS/CAL/hcal_geom.param
+Opening parameter file: [1] PARAM/SHMS/GEN/spring23/pcana_init.param
+Opening parameter file: [1] PARAM/SHMS/GEN/spring23/pdebug.param
+Opening parameter file: [1] PARAM/SHMS/GEN/spring23/p_fadc_debug.param
+Opening parameter file: [1] PARAM/SHMS/GEN/spring23/shmsflags_init.param
+Opening parameter file: [1] PARAM/SHMS/GEN/spring23/ptracking_init.param
+Opening parameter file: [1] PARAM/SHMS/GEN/spring23/p_reftime_cut_init.param
+Opening parameter file: [1] PARAM/SHMS/NGCER/pngcer_geom.param
+Opening parameter file: [1] PARAM/SHMS/DC/pdc_geom.param
+Opening parameter file: [1] PARAM/SHMS/HODO/phodo_geom.param
+Opening parameter file: [1] PARAM/SHMS/HGCER/phgcer_geom.param
+Opening parameter file: [1] PARAM/SHMS/AERO/paero_geom.param
+Opening parameter file: [1] PARAM/SHMS/CAL/pcal_geom.param
+Opening parameter file: [0] DBASE/COIN/GEN/det_calib_deut_spring23.param
+Opening parameter file: [1] PARAM/HMS/HODO/hhodo_calib.param
+Opening parameter file: [1] PARAM/HMS/HODO/spring23/calib/hhodo_TWcalib_init.param
+Opening parameter file: [1] PARAM/HMS/HODO/spring23/calib/hhodo_Vpcalib_init.param
+Opening parameter file: [1] PARAM/HMS/DC/spring23/calib/hdc_calib_init.param
+Opening parameter file: [1] PARAM/HMS/DC/spring23/calib/hdc_tzero_per_wire_init.param
+Opening parameter file: [1] PARAM/HMS/CAL/spring23/calib/hcal_calib_init.param
+Opening parameter file: [1] PARAM/HMS/CER/spring23/calib/hcer_calib_init.param
+Opening parameter file: [1] PARAM/HMS/AERO/haero_calib.param
+Opening parameter file: [1] PARAM/SHMS/HODO/phodo_calib.param
+Opening parameter file: [1] PARAM/SHMS/HODO/spring23/calib/phodo_TWcalib_init.param
+Opening parameter file: [1] PARAM/SHMS/HODO/spring23/calib/phodo_Vpcalib_init.param
+Opening parameter file: [1] PARAM/SHMS/DC/spring23/calib/pdc_calib_init.param
+Opening parameter file: [1] PARAM/SHMS/DC/spring23/calib/pdc_tzero_per_wire_init.param
+Opening parameter file: [1] PARAM/SHMS/CAL/spring23/calib/pcal_calib_init.param
+Opening parameter file: [1] PARAM/SHMS/NGCER/spring23/calib/pngcer_calib_init.param
+Opening parameter file: [1] PARAM/SHMS/HGCER/spring23/calib/phgcer_calib_init.param
+Opening parameter file: [1] PARAM/SHMS/AERO/paero_calib.param
+Opening parameter file: [0] DBASE/COIN/GEN/det_cuts_deut_spring23.param
+Opening parameter file: [1] PARAM/HMS/HODO/spring23/cuts/hhodo_cuts_init.param
+Opening parameter file: [1] PARAM/HMS/DC/spring23/cuts/hdc_cuts_init.param
+Opening parameter file: [1] PARAM/HMS/CAL/spring23/cuts/hcal_cuts_init.param
+Opening parameter file: [1] PARAM/HMS/CER/spring23/cuts/hcer_cuts_init.param
+Opening parameter file: [1] PARAM/HMS/AERO/haero_cuts.param
+Opening parameter file: [1] PARAM/SHMS/HODO/spring23/cuts/phodo_cuts_init.param
+Opening parameter file: [1] PARAM/SHMS/DC/spring23/cuts/pdc_cuts_init.param
+Opening parameter file: [1] PARAM/SHMS/CAL/spring23/cuts/pcal_cuts_init.param
+Opening parameter file: [1] PARAM/SHMS/NGCER/spring23/cuts/pngcer_cuts_init.param
+Opening parameter file: [1] PARAM/SHMS/HGCER/spring23/cuts/phgcer_cuts_init.param
+Opening parameter file: [1] PARAM/SHMS/AERO/paero_cuts.param
+Opening parameter file: [1] PARAM/TRIG/spring23/tcoin_init.param
+Opening parameter file: [0] DBASE/COIN/STD/standard.kinematics
+Reading Parameters for run 20841
+
+ Detector ID Map
+
+   HDC 11
+   HSCIN 13
+   HCER 14
+   HCAL 15
+   HRASTER 18
+   PNGCER 21
+   PDC 22
+   PSCIN 23
+   PHGCER 24
+   PAERO 25
+   PCAL 26
+   PRASTER 28
+   TCOIN 30
+
+Evio file EvioVersion = 2
+in THaRun::Open:  coda version 2
+Prestart at 1
+OBJ: THcRun	RUN_20841	
+Run number: 20841
+Run date:   Sat Feb 25 16:16:31 2023
+Requested event range: 1-10000
+Analyzed events:       0
+Assume Date:           0
+Database read:         0
+Initialized  :         0
+Opened       :         0
+Date set/read/req:     1 1 1
+Run num set/read/req:  1 1 1
+Run type set/read/req: 1 1 1
+Prescales set/rd/req:  0 0 0
+DAQInfo set/rd/req:    0 0 0
+Run parameters: 
+ Beam: 
+  Energy      = 0 +/- 0 GeV
+  Momentum    = 0 GeV/c
+  Mass/Charge = 0/0 GeV/c^2
+ Target: 
+  Mass:       = 0 GeV/c^2
+ DAQ:
+  Prescale factors: (1-12)
+   0/0/0/0/0/0/0/0/0/0/0/0
+Max # scan:     1
+CODA file:      ./CACHE_LINKS/cache_deut/shms_all_20841.dat
+Segment number: -1
+Stream number:  -1
+Initializing run object
+in THaRun::Open:  coda version 2
+Prestart at 1
+Overwriting existing output file: /home/gvill/deuteron/ROOTfiles/sample/deut_replay_sample_20841_10000.root
+OBJ: THcRun	RUN_20841	
+Run number: 20841
+Run date:   Sat Feb 25 16:16:31 2023
+Requested event range: 1-10000
+Max # scan:     1
+CODA file:      ./CACHE_LINKS/cache_deut/shms_all_20841.dat
+Segment number: -1
+Stream number:  -1
+Initializing analysis objects
+Initializing D
+Initializing P
+In THcHallCSpectrometer::ReadDatabase()
+ GetName() P
+p From Formula Mispointing_y = -0.06
+p From Formula Mispointing_x = -0.126
+
+
+
+hodo planes = 4
+sel using scin = 0
+fPruneXp = 0.3
+fPruneYp = 0.3
+fPruneYtar = 6
+fPruneDelta = 30
+fPruneBeta = 0.8
+fPruneDf = 1
+fPruneChiBeta = 100
+fPruneFpTime = 1000
+fPruneNPMT = 6
+sel using prune = 1
+fPartMass = 0.000511
+fPcentral = 8.55 -0.36
+fThetalab = 14.153 0
+Read 215 matrix element terms
+Defining pngcer_tdcref_miss and pngcer_adcref_miss
+Created Cherenkov detector P.ngcer with 4 PMTs
+ fSampThreshold 1 = 5
+*** WARNING!!!  Rounded pngcer_adcrefcut to nearest integer 
+ fSampThreshold = 5
+InitHitList: THcCherenkovHit RefTimeCuts: 0 -5600
+*** WARNING!!!  Rounded pdc_tdcrefcut to nearest integer 
+Plane Name List: 1u1 1u2 1x1 1x2 1v1 1v2 2v2 2v1 2x2 2x1 2u2 2u1
+Drift Chambers: 12 planes in 2 chambers
+Created Drift Chamber 1, Ch1
+Created Drift Chamber 2, Ch2
+ DC tdc ref time cut = -15500
+InitHitList: THcRawDCHit RefTimeCuts: -15500 0
+Defining pdc_tdcref_miss and pdc_adcref_miss
+*** WARNING!!!  Rounded pdc_tdc_min_win elements to nearest integer 
+*** WARNING!!!  Rounded pdc_tdc_max_win elements to nearest integer 
+Plane counts: 107 107 79 79 107 107 107 107 79 79 107 107
+*** WARNING!!!  Rounded phodo_tdcrefcut to nearest integer 
+*** WARNING!!!  Rounded phodo_adcrefcut to nearest integer 
+Plane Name List : 1x 1y 2x 2y
+Created Scintillator Plane 1x, Hodoscope Plane 1x
+Created Scintillator Plane 1y, Hodoscope Plane 1y
+Created Scintillator Plane 2x, Hodoscope Plane 2x
+Created Scintillator Plane 2y, Hodoscope Plane 2y
+ Hodo tdc ref time cut = -7000 -7000
+InitHitList: THcRawHodoHit RefTimeCuts: -7000 -7000
+Defining pscin_tdcref_miss and pscin_adcref_miss
+USING 2 NSEC WINDOW FOR FP NO_TRACK CALCULATIONS.
+ fRatio_xpfp_to_xfp= 0.0018
+Defining phgcer_tdcref_miss and phgcer_adcref_miss
+Created Cherenkov detector P.hgcer with 4 PMTs
+ fSampThreshold 1 = 5
+*** WARNING!!!  Rounded phgcer_adcrefcut to nearest integer 
+ fSampThreshold = 5
+InitHitList: THcCherenkovHit RefTimeCuts: 0 -5600
+Defining paero_tdcref_miss and paero_adcref_miss
+Created aerogel detector P.aero with 7 PMT pairs
+*** WARNING!!!  Rounded paero_adcrefcut to nearest integer 
+InitHitList: THcAerogelHit RefTimeCuts: 0 -5600
+*** WARNING!!!  Rounded pcal_adcrefcut to nearest integer 
+From THcShower::Setup: created Shower planes for P: pr, fly.
+InitHitList: THcRawShowerHit RefTimeCuts: 0 -5600
+Defining pcal_tdcref_miss and pcal_adcref_miss
+THcShowerPlane::DefineVariables: registered counters P.cal.stat_trksum1 and P.cal.stat_hitsum1
+ fSampThreshold 1 = 5
+Initializing P.rb
+InitHitList: THcRasterRawHit RefTimeCuts: 0 0
+ THcRaster is using EPICS bpm for beam position
+Initializing H
+In THcHallCSpectrometer::ReadDatabase()
+ GetName() H
+h From Formula Mispointing_x = 0.0836603
+
+
+
+hodo planes = 4
+sel using scin = 0
+fPruneXp = 0.2
+fPruneYp = 0.2
+fPruneYtar = 20
+fPruneDelta = 30
+fPruneBeta = 30
+fPruneDf = 1
+fPruneChiBeta = 100
+fPruneFpTime = 1000
+fPruneNPMT = 6
+sel using prune = 1
+fPartMass = 0.938272
+fPcentral = 3.499 -0.188
+fThetalab = -33.344 0
+Read 461 matrix element terms
+*** WARNING!!!  Rounded hdc_tdcrefcut to nearest integer 
+Plane Name List: 1u1 1u2 1x1 1x2 1v2 1v1 2v1 2v2 2x2 2x1 2u2 2u1
+Drift Chambers: 12 planes in 2 chambers
+Created Drift Chamber 1, Ch1
+Created Drift Chamber 2, Ch2
+ DC tdc ref time cut = -15000
+InitHitList: THcRawDCHit RefTimeCuts: -15000 0
+Defining hdc_tdcref_miss and hdc_adcref_miss
+*** WARNING!!!  Rounded hdc_tdc_min_win elements to nearest integer 
+*** WARNING!!!  Rounded hdc_tdc_max_win elements to nearest integer 
+Plane counts: 96 96 102 102 96 96 96 96 102 102 96 96
+*** WARNING!!!  Rounded hhodo_tdcrefcut to nearest integer 
+*** WARNING!!!  Rounded hhodo_adcrefcut to nearest integer 
+Plane Name List : 1x 1y 2x 2y
+Created Scintillator Plane 1x, Hodoscope Plane 1x
+Created Scintillator Plane 1y, Hodoscope Plane 1y
+Created Scintillator Plane 2x, Hodoscope Plane 2x
+Created Scintillator Plane 2y, Hodoscope Plane 2y
+ Hodo tdc ref time cut = -3500 -5000
+InitHitList: THcRawHodoHit RefTimeCuts: -3500 -5000
+Defining hscin_tdcref_miss and hscin_adcref_miss
+USING 10 NSEC WINDOW FOR FP NO_TRACK CALCULATIONS.
+ fRatio_xpfp_to_xfp= 0.0011
+Defining hcer_tdcref_miss and hcer_adcref_miss
+Created Cherenkov detector H.cer with 2 PMTs
+ fSampThreshold 1 = 5
+*** WARNING!!!  Rounded hcer_PedDefault elements to nearest integer 
+*** WARNING!!!  Rounded hcer_adcrefcut to nearest integer 
+ fSampThreshold = 5
+InitHitList: THcCherenkovHit RefTimeCuts: 0 -5000
+*** WARNING!!!  Rounded hcal_adcrefcut to nearest integer 
+From THcShower::Setup: created Shower planes for H: 1pr, 2ta, 3ta, 4ta.
+InitHitList: THcRawShowerHit RefTimeCuts: 0 -5000
+Defining hcal_tdcref_miss and hcal_adcref_miss
+THcShowerPlane::DefineVariables: registered counters H.cal.stat_trksum1 and H.cal.stat_hitsum1
+THcShowerPlane::DefineVariables: registered counters H.cal.stat_trksum2 and H.cal.stat_hitsum2
+THcShowerPlane::DefineVariables: registered counters H.cal.stat_trksum3 and H.cal.stat_hitsum3
+THcShowerPlane::DefineVariables: registered counters H.cal.stat_trksum4 and H.cal.stat_hitsum4
+Initializing H.rb
+InitHitList: THcRasterRawHit RefTimeCuts: 0 0
+ THcRaster is using EPICS bpm for beam position
+Initializing T
+ Trig = 4
+pTRIG1_ROC1 27
+pTRIG3_ROC1 29
+pTRIG1_ROC2 58
+pTRIG3_ROC2 60
+pRF 112
+hRF 111
+*** WARNING!!!  Rounded t_coin_trig_tdcrefcut to nearest integer 
+*** WARNING!!!  Rounded t_coin_trig_adcrefcut to nearest integer 
+InitHitList: THcTrigRawHit RefTimeCuts: -6000 -7000
+Defining t_coin_tdcref_miss and t_coin_adcref_miss
+Initializing P.react
+Initializing P.extcor
+In THcExtTarCor::ReadDatabase()
+Initializing P.gtr
+Initializing phodeff
+
+
+THcHodoEff::ReadDatabase nplanes=4
+Plane = 1    counters = 13
+Plane = 2    counters = 13
+Plane = 3    counters = 14
+Plane = 4    counters = 21
+THcHodoEff::Init nplanes=4
+THcHodoEff::Init Apparatus = hod P
+Initializing H.react
+Initializing H.extcor
+In THcExtTarCor::ReadDatabase()
+Initializing H.gtr
+Initializing hhodeff
+
+
+THcHodoEff::ReadDatabase nplanes=4
+Plane = 1    counters = 16
+Plane = 2    counters = 10
+Plane = 3    counters = 16
+Plane = 4    counters = 10
+THcHodoEff::Init nplanes=4
+THcHodoEff::Init Apparatus = hod H
+Initializing P.kin.primary
+In THcPrimaryKine::ReadDatabase()
+Initializing H.kin.secondary
+THcSecondaryKine particleMASS: 0.938272
+Initializing CTime
+*************************************************
+Initializing THcCointTime Physics Modue
+Hadron Arm   -------> H
+Electron Arm -------> P
+TrigDet  -------> T.coin
+**************************************************
+Initializing RFTime
+*************************************************
+Initializing THcRFTime Physics Modue
+Hadron Arm   -------> P
+Electron Arm -------> H
+TrigDet  -------> T.coin
+Initializing epics
+Initializing P
+Howdy !  We are initializing THcScalerEvtHandler !!   name =   P
+Setting scaler clock ... channel = 31 ... freq = 1e+06
+Initializing H
+Howdy !  We are initializing THcScalerEvtHandler !!   name =   H
+Setting scaler clock ... channel = 31 ... freq = 1e+06
+Initializing HC
+Howdy !  We are initializing THcConfigEvtHandler !!   name =   HC
+Initializing epics
+Loading cuts from DEF-files/CUTS/deut_cuts.def
+Initializing output
+
+THaOutput definitions: 
+=== Number of variables 521
+
+in THaRun::Open:  coda version 2
+Decoder: helicity disabled
+
+Starting analysis
+------------------
+  Event type 125
+THcConfigEvtHandler: 1
+ADC information: Block level 1
+ADC thresholds for slots  3 4 5 6 7 8 9 10 13 14 15 16 17 18
+TDC information
+Making Parms for ROC 1  Event type 125
+------------------
+  Event type 125
+THcConfigEvtHandler: 4
+ADC information: Block level 1
+ADC thresholds for slots  3 4 5 6 7 8 9 10 13 14 15 16 17 18 19 20
+Making Parms for ROC 4  Event type 125
+------------------
+  Event type 125
+THcConfigEvtHandler: 3
+TDC information
+Making Parms for ROC 3  Event type 125
+------------------
+  Event type 125
+THcConfigEvtHandler: 6
+TDC information
+Making Parms for ROC 6  Event type 125
+------------------
+  Event type 125
+THcConfigEvtHandler: 2
+ADC information: Block level 1
+ADC thresholds for slots  3 4 5 6 7 8 9 10 13 14
+TDC information
+Making Parms for ROC 2  Event type 125
+<THaCrateMap::init(tloc)>: Opened database file MAPS/db_cratemap.dat
+THaCrateMap::WARNING:  Did not find TSROC.  Using default 21
+1000
+1000
+2000
+3000
+3000
+4000
+4000
+5000
+5000
+6000
+6000
+7000
+7000
+8000
+8000
+9000
+9000
+10000
+Missing Ref times:             P.ngcer         0         0
+Missing Ref times:                P.dc         0         0
+Missing Ref times:               P.hod         0         0
+Missing Ref times:             P.hgcer         0         0
+Missing Ref times:              P.aero         0         0
+Missing Ref times:               P.cal         0         0
+Missing Ref times:                H.dc         0         0
+Missing Ref times:               H.hod         0         0
+Missing Ref times:               H.cer         0         0
+Missing Ref times:               H.cal         0         0
+Missing Ref times:              T.coin         0         0
+THcScalerEvtHandler::End Analyzing 0 delayed scaler events
+THcScalerEvtHandler::End Analyzing 0 delayed scaler events
+Event limit reached.
+==== Thu Jul  6 11:08:50 2023 Summary for run 20841
+Counter summary:
+10249  events read
+10249  events decoded
+10000  physics events
+  211  slow control events
+   38  other event types
+10000  physics events analyzed
+10211  events accepted
+   38  skipped after raw decoding
+
+Cut summary:
+Name                      Def                                                                                        Called     Passed
+----------------------------------------------------------------------------------------------------------------------------------------------
+BLOCK: RawDecode
+Pedestal_event            g.evtyp==99                                                                                10249      0     (0%)
+SHMS_event                g.evtyp==1                                                                                 10249      0     (0%)
+HMS_event                 g.evtyp==2                                                                                 10249      0     (0%)
+BOTH_SINGLES_event        g.evtyp==3                                                                                 10249      0     (0%)
+COIN_ONLY_event           g.evtyp==4                                                                                 10249      10000 (97.6%)
+SHMS_COIN_event           g.evtyp==5                                                                                 10249      0     (0%)
+HMS_COIN_event            g.evtyp==6                                                                                 10249      0     (0%)
+COIN_ALL_event            g.evtyp==7                                                                                 10249      0     (0%)
+ALL_COIN_events           g.evtyp>=4&&g.evtyp<=7                                                                     10249      10000 (97.6%)
+ALL_events                g.evtyp>=1&&g.evtyp<=7                                                                     10249      10000 (97.6%)
+ALL_HMS_events            HMS_event||COIN_ONLY_event||HMS_COIN_event||COIN_ALL_event                                 10249      10000 (97.6%)
+ALL_SHMS_events           SHMS_event||COIN_ONLY_event||SHMS_COIN_event||COIN_ALL_event                               10249      10000 (97.6%)
+RawDecode_master          ALL_events                                                                                 10249      10000 (97.6%)
+
+BLOCK: Decode
+pTRIG1_ROC2               T.coin.pTRIG1_ROC2_tdcTime>0                                                               10000      9977  (99.8%)
+pTRIG2_ROC2               T.coin.pTRIG2_ROC2_tdcTime>0                                                               10000      9605  (96%)
+pTRIG3_ROC2               T.coin.pTRIG3_ROC2_tdcTime>0                                                               10000      9988  (99.9%)
+pTRIG4_ROC2               T.coin.pTRIG4_ROC2_tdcTime>0                                                               10000      4958  (49.6%)
+pTRIG5_ROC2               T.coin.pTRIG5_ROC2_tdcTime>0                                                               10000      9596  (96%)
+pTRIG6_ROC2               T.coin.pTRIG6_ROC2_tdcTime>0                                                               10000      9982  (99.8%)
+pTRIG1_ROC2_noEDTM        T.coin.pTRIG1_ROC2_tdcTime>0&&T.coin.pEDTM_tdcTime==0.0                                    10000      5799  (58%)
+pTRIG2_ROC2_noEDTM        T.coin.pTRIG2_ROC2_tdcTime>0&&T.coin.pEDTM_tdcTime==0.0                                    10000      5484  (54.8%)
+pTRIG3_ROC2_noEDTM        T.coin.pTRIG3_ROC2_tdcTime>0&&T.coin.pEDTM_tdcTime==0.0                                    10000      5806  (58.1%)
+pTRIG4_ROC2_noEDTM        T.coin.pTRIG4_ROC2_tdcTime>0&&T.coin.pEDTM_tdcTime==0.0                                    10000      775   (7.75%)
+pTRIG5_ROC2_noEDTM        T.coin.pTRIG5_ROC2_tdcTime>0&&T.coin.pEDTM_tdcTime==0.0                                    10000      5479  (54.8%)
+pTRIG6_ROC2_noEDTM        T.coin.pTRIG6_ROC2_tdcTime>0&&T.coin.pEDTM_tdcTime==0.0                                    10000      5805  (58%)
+shms_edtm_accepted        T.coin.pEDTM_tdcTime>0                                                                     10000      4170  (41.7%)
+hms_edtm_accepted         T.coin.hEDTM_tdcTime>0                                                                     10000      4185  (41.9%)
+ALL_HMS_events_NOEDTM     T.coin.hEDTM_tdcTime==0.0&&ALL_HMS_events                                                  10000      5815  (58.1%)
+ALL_SHMS_events_NOEDTM    T.coin.pEDTM_tdcTime==0.0&&ALL_SHMS_events                                                 10000      5815  (58.1%)
+ALL_COIN_events_NO_EDTM   T.coin.hEDTM_tdcTime==0.0&&T.coin.pEDTM_tdcTime==0.0&&ALL_COIN_events                      10000      5815  (58.1%)
+ALL_events_NO_EDTM        T.coin.hEDTM_tdcTime==0.0&&T.coin.pEDTM_tdcTime==0.0&&ALL_events                           10000      5815  (58.1%)
+Decode_master             ALL_events                                                                                 10000      10000 (100%)
+
+BLOCK: CoarseTracking
+CoarseTracking_master     ALL_events                                                                                 10000      10000 (100%)
+
+BLOCK: CoarseReconstruct
+CoarseReconstruct_master  ALL_events                                                                                 10000      10000 (100%)
+
+BLOCK: Tracking
+pcut_cer_ng_elec          P.ngcer.npeSum>1.5                                                                         10000      5794  (57.9%)
+pcut_cal_elec             P.cal.etotnorm>0.6&&P.cal.etotnorm<1.5                                                     10000      5097  (51%)
+pcut_elec_all             pcut_cer_ng_elec&&pcut_cal_elec                                                            10000      5076  (50.8%)
+pcut_cer_ng_had           P.ngcer.npeSum<=1.5                                                                        10000      4206  (42.1%)
+pcut_cal_had              P.cal.etotnorm>0.&&P.cal.etotnorm<=0.6                                                     10000      555   (5.55%)
+pcut_had_all              pcut_cer_ng_had&&pcut_cal_had                                                              10000      79    (0.79%)
+shmsScinGood              P.hod.goodscinhit==1                                                                       10000      3921  (39.2%)
+shmsGoodBetanotrk         P.hod.betanotrack>0.5&&P.hod.betanotrack<1.5                                               10000      5775  (57.8%)
+shmshodstarttime          P.hod.goodstarttime==1                                                                     10000      5778  (57.8%)
+shmsScinShould            shmsScinGood&&shmsGoodBetanotrk&&shmshodstarttime                                          10000      3920  (39.2%)
+shmsScinShoulde           shmsScinShould&&pcut_elec_all                                                              10000      3842  (38.4%)
+shmsScinShouldh           shmsScinShould&&pcut_had_all                                                               10000      2     (0.02%)
+shmsScinDid               shmsScinShould&&P.dc.ntrack>0                                                              10000      3857  (38.6%)
+shmsScinDide              shmsScinShoulde&&P.dc.ntrack>0                                                             10000      3818  (38.2%)
+shmsScinDidh              shmsScinShouldh&&P.dc.ntrack>0                                                             10000      1     (0.01%)
+hcut_cer_elec             H.cer.npeSum>0.5                                                                           10000      196   (1.96%)
+hcut_cal_elec             H.cal.etotnorm>0.6&&H.cal.etotnorm<1.5                                                     10000      2     (0.02%)
+hcut_elec_all             hcut_cer_elec&&hcut_cal_elec                                                               10000      0     (0%)
+hcut_cer_had              H.cer.npeSum<0.5                                                                           10000      9804  (98%)
+hcut_cal_had              H.cal.etotnorm>0.&&H.cal.etotnorm<0.6                                                      10000      3279  (32.8%)
+hcut_had_all              hcut_cer_had&&hcut_cal_had                                                                 10000      3177  (31.8%)
+hmsScinGood               H.hod.goodscinhit==1                                                                       10000      4133  (41.3%)
+hmsGoodBetanotrk          H.hod.betanotrack>0.5&&H.hod.betanotrack<1.5                                               10000      5803  (58%)
+hmshodstarttime           H.hod.goodstarttime==1                                                                     10000      5809  (58.1%)
+hmsScinShould             hmsScinGood&&hmsGoodBetanotrk&&hmshodstarttime                                             10000      4133  (41.3%)
+hmsScinShouldh            hmsScinShould&&hcut_had_all                                                                10000      2227  (22.3%)
+hmsScinShoulde            hmsScinShould&&hcut_elec_all                                                               10000      0     (0%)
+hmsScinDid                hmsScinShould&&H.dc.ntrack>0                                                               10000      4031  (40.3%)
+hmsScinDidh               hmsScinShouldh&&H.dc.ntrack>0                                                              10000      2167  (21.7%)
+hmsScinDide               hmsScinShoulde&&H.dc.ntrack>0                                                              10000      0     (0%)
+Tracking_master           ALL_events                                                                                 10000      10000 (100%)
+
+BLOCK: Reconstruct
+Reconstruct_master        ALL_events                                                                                 10000      10000 (100%)
+
+BLOCK: Physics
+shms_accp_cut             P.gtr.th>-0.06&&P.gtr.th<0.06&&P.gtr.ph>-0.04&&P.gtr.ph<0.04&&P.gtr.dp>-10&&P.gtr.dp<20    10000      3767  (37.7%)
+shmsInDipoleExit          P.dc.InsideDipoleExit==1                                                                   10000      9847  (98.5%)
+shmsGen                   shmshodstarttime&&shmsInDipoleExit&&shms_accp_cut                                          10000      3760  (37.6%)
+shmsCal_el                P.cal.etottracknorm>0.7&&P.cal.etottracknorm<1.4                                           10000      5048  (50.5%)
+shmsNGC_should_e          shmsGen&&shmsCal_el                                                                        10000      3746  (37.5%)
+shmsNGC_did_e             shmsNGC_should_e&&P.ngcer.npeSum>0.5                                                       10000      3727  (37.3%)
+hms_accp_cut              H.gtr.th>-0.08&&H.gtr.th<0.08&&H.gtr.ph>-0.045&&H.gtr.ph<0.045&&H.gtr.dp>-10&&H.gtr.dp<10  10000      5240  (52.4%)
+hmsInDipoleExit           H.dc.InsideDipoleExit==1                                                                   10000      9986  (99.9%)
+hmsGen                    hmshodstarttime&&hmsInDipoleExit&&hms_accp_cut                                             10000      5238  (52.4%)
+hmsCal_h                  H.cal.etottracknorm>0.&&H.cal.etottracknorm<=0.7                                           10000      3119  (31.2%)
+hmsHGC_should_h           hmsGen&&hmsCal_h                                                                           10000      2963  (29.6%)
+hmsHGC_did_h              hmsHGC_should_h&&H.cer.npeSum<1.                                                           10000      2915  (29.1%)
+hcut_CleanTrack           H.gtr.index>-1&&H.gtr.dp>-10.0&&H.gtr.dp<10.0                                              10000      5307  (53.1%)
+pcut_CleanTrack           P.gtr.index>-1&&P.gtr.dp>-10.0&&P.gtr.dp<22.0                                              10000      3805  (38%)
+Physics_master            ALL_events                                                                                 10000      10000 (100%)
+
+Total     : Real Time =  22.90 seconds Cpu Time =  20.17 seconds
+Time taken by replay_deut: 23 sec.
+Exiting Now . . .
