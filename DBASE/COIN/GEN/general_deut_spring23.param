@@ -22,7 +22,7 @@ cminch=2.54
 #include "PARAM/HMS/GEN/spring23/h_fadc_debug.param"
 #include "PARAM/HMS/GEN/spring23/hmsflags_init.param"
 #include "PARAM/HMS/GEN/spring23/htracking_init.param"
-#include "PARAM/HMS/GEN/spring23/h_reftime_cut.param"
+#include "PARAM/HMS/GEN/spring23/h_reftime_cut_init.param"
 
 ; HMS default geometry parameter files 
 #include "PARAM/HMS/CER/hcer_geom.param"
@@ -40,8 +40,7 @@ cminch=2.54
 #include "PARAM/SHMS/GEN/spring23/p_fadc_debug.param"
 #include "PARAM/SHMS/GEN/spring23/shmsflags_init.param" 
 #include "PARAM/SHMS/GEN/spring23/ptracking_init.param"
-#include "PARAM/SHMS/GEN/spring23/p_reftime_cut.param"
-
+#include "PARAM/SHMS/GEN/spring23/p_reftime_cut_init.param"
 
 ; SHMS default geometry parameter files
 #include "PARAM/SHMS/NGCER/pngcer_geom.param"

@@ -9,15 +9,8 @@
 ; Cut is on reference time per detector.
 
 ; Srping 2023 Init Ref. Times 
-;hdc_tdcrefcut=-10000.
-;hhodo_tdcrefcut=-1000.
-;hhodo_adcrefcut=-1000.
-;hcer_adcrefcut=-1000.
-;hcal_adcrefcut=-1000.
-
-;GV final cuts (separate from singles) 01/16/24
-hdc_tdcrefcut=-16000
-hhodo_tdcrefcut=-3500
-hhodo_adcrefcut=-5000
-hcer_adcrefcut=-5000
-hcal_adcrefcut=-5000
+hdc_tdcrefcut=-10000.
+hhodo_tdcrefcut=-1000.
+hhodo_adcrefcut=-1000.
+hcer_adcrefcut=-1000.
+hcal_adcrefcut=-1000.

@@ -40,7 +40,6 @@ static const Int_t pmaxPMT[hod_PLANES] = {13, 13, 14, 21};
   // by their replay script so that the existing cuts may be overlayed with
   // the replayed data, and determine whether to change the limits or not
 TString pref_param_fname;
-TString pref_singles_param_fname;
 TString href_param_fname;
 
 TString phodo_param_fname;

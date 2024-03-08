@@ -25,5 +25,5 @@ phgcer_PedDefault= 2083, 2142, 2309, 1976
 
 ; fall 2022 startup
 ; cut variable is P.hgcer.goodAdcTdcDiffTime
-phgcer_adcTimeWindowMin = -100.0, -100.0, -100.0, -100.0
-phgcer_adcTimeWindowMax =  100.0,  100.0,  100.0,  100.0
+phgcer_adcTimeWindowMin = -500.0, -500.0, -500.0, -500.0
+phgcer_adcTimeWindowMax =  500.0,  500.0,  500.0,  500.0

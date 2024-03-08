@@ -17,7 +17,6 @@ cminch=2.54
 #include "PARAM/SHMS/GEN/shmsflags.param"
 #include "PARAM/SHMS/GEN/ptracking.param"
 #include "PARAM/SHMS/GEN/p_reftime_cut.param"
-#include "PARAM/SHMS/GEN/p_reftime_singles_cut.param"
 
 ; SHMS default geometry parameter files
 #include "PARAM/SHMS/NGCER/pngcer_geom.param"

@@ -30,9 +30,8 @@ void set_param_files(){
   // look for the '_cuts_filename' corresponding to the run in the specified run-range
 
 
-  pref_param_fname = "../../PARAM/SHMS/GEN/spring23/p_reftime_cut.param";
-  pref_singles_param_fname = "../../PARAM/SHMS/GEN/spring23/p_reftime_singles_cut.param";
-  href_param_fname = "../../PARAM/HMS/GEN/spring23/h_reftime_cut.param";
+  pref_param_fname = "../../PARAM/SHMS/GEN/spring23/p_reftime_cut_init.param";
+  href_param_fname = "../../PARAM/HMS/GEN/spring23/h_reftime_cut_init.param";
 
   phodo_param_fname = "../../PARAM/SHMS/HODO/spring23/cuts/phodo_cuts_init.param";
   hhodo_param_fname = "../../PARAM/HMS/HODO/spring23/cuts/hhodo_cuts_init.param";
@@ -58,11 +57,11 @@ Double_t read_ref_times(TString spec="", TString det_reftime_name=""){
      ------
      input:
      ------
-     spec                :  spectrometer name ("HMS", "SHMS", or "SHMS_singles")
+     spec                :  spectrometer name ("HMS" or "SHMS")
      det_reftime_name    :  detector reference time name (as it appears in ref. time param file)
      
      
-     "HGCER", "NGCER" only apply if using "SHMS" or "SHMS_singles"
+     "HGCER", "NGCER" only apply if using "SHMS"
 
      NOTE: the adc ref. cuts are same for all detectors since each received a copy of the same signal
 
@@ -84,10 +83,6 @@ Double_t read_ref_times(TString spec="", TString det_reftime_name=""){
     //cout << Form("reading reference time parameter '%s' from: %s",  det_reftime_name.Data(), param_fname.Data()) << endl;
     det_reftime = stod(split(FindString(Form("%s", det_reftime_name.Data()),  pref_param_fname.Data())[0], '=')[1]);
   }
-  else if (spec=="SHMS_singles"){
-    //cout << Form("reading reference time parameter '%s' from: %s",  det_reftime_name.Data(), param_fname.Data()) << endl;
-    det_reftime = stod(split(FindString(Form("%s", det_reftime_name.Data()),  pref_singles_param_fname.Data())[0], '=')[1]);
-  }
   else if (spec=="HMS"){
     //cout << Form("reading reference time parameter '%s' from: %s",  det_reftime_name.Data(), param_fname.Data()) << endl;
     det_reftime = stod(split(FindString(Form("%s", det_reftime_name.Data()),   href_param_fname.Data())[0], '=')[1]);
@@ -98,14 +93,14 @@ Double_t read_ref_times(TString spec="", TString det_reftime_name=""){
 }
 
 
-void set_reftimes(TString filename="", int run=0, TString daq_mode="coin", Bool_t set_refTimes=true, Bool_t debug=false, Bool_t singles=false)
+void set_reftimes(TString filename="", int run=0, TString daq_mode="coin", Bool_t set_refTimes=true, Bool_t debug=false)
 {
   
   /* user input: 
      
      1. run      --> run number
      
-     2. daq_mode --> "hms", "shms", "coin" (DAQ Mode) //For deut2023 we want to leave this at "coin"
+     2. daq_mode --> "hms", "shms", "coin" (DAQ Mode)
      
      3. set_refTimes --> true or false (determine whether to set reference time cuts) 
      NOTE: If true, will  plot reference time histos in the corresponding directories (USER must determine which cut to set based on the histos)
@@ -113,9 +108,6 @@ void set_reftimes(TString filename="", int run=0, TString daq_mode="coin", Bool_
      
      4. debug  --> true or false | if true, will attempt to plot the hodo and cal ADC/TDC Times separately for debugging purposes, to check individual histos
      that are responsible for making up the ADC-TDC Time differences histos
-
-	 5. singles --> true if the run to analyze is a (shms) singles run, otherwise false. During the deuteron 2023 experiment the DAQ sys was always run in coincidence
-	 mode, even for hydrogen elastic singles or luminosity scans always on the shms. I added this option to allow the use for different calibration files for singles runs -gvill
      
    */
 
@@ -412,7 +404,7 @@ void set_reftimes(TString filename="", int run=0, TString daq_mode="coin", Bool_
 
 
     
-    //Loop over HMS Cherenkov PMTs
+    //Loov over HMS  Cherenkov PMTs
     for (Int_t ipmt = 0; ipmt < 2; ipmt++ )
       {
 	n_hcer_TdcAdcTimeDiff =  "H.cer.goodAdcTdcDiffTime";
@@ -904,7 +896,7 @@ void set_reftimes(TString filename="", int run=0, TString daq_mode="coin", Bool_
   // flag to draw new suggested cut line 
   Bool_t new_line_flg = false;
 
-  if(set_refTimes && !singles) {
+  if(set_refTimes) {
     
     //-------Reference Time Histograms----------
     
@@ -974,136 +966,6 @@ void set_reftimes(TString filename="", int run=0, TString daq_mode="coin", Bool_
     phod_trefcut = read_ref_times("SHMS", "phodo_tdcrefcut");
     pdc_trefcut  = read_ref_times("SHMS", "pdc_tdcrefcut");
     padc_trefcut = read_ref_times("SHMS", "phodo_adcrefcut");
-    
-    
-    pT2_Line = new TLine(abs(phod_trefcut), 0,    abs(phod_trefcut), P_hodo_Tref2->GetMaximum());
-    pDCREF_Line = new TLine(abs(pdc_trefcut), 0,  abs(pdc_trefcut), P_DC_Tref[0]->GetMaximum());
-    pFADC_Line = new TLine(abs(padc_trefcut), 0,  abs(padc_trefcut), P_FADC_Tref->GetMaximum());
-    
-    shms_REF_Canv->cd(1);
-    gPad->SetLogy();
-    auto pref_legend = new TLegend(0.1, 0.7, 0.6, 0.9);
-    P_hodo_Tref1_CUT->SetLineColor(kRed);
-    P_hodo_Tref2_CUT->SetLineColor(kRed); 
-    P_hodo_Tref1->GetXaxis()->SetTitle("Hodo Ref. Time [Channel]"); 
-    P_hodo_Tref1->Draw();
-    P_hodo_Tref2->Draw("sames");
-    P_hodo_Tref1_CUT->Draw("sames");
-    P_hodo_Tref2_CUT->Draw("sames");  
-    pT2_Line->SetLineColor(kBlue);
-    pT2_Line->SetLineStyle(2);
-    pT2_Line->SetLineWidth(3);
-    pT2_Line->Draw();
-    pref_legend->AddEntry(pT2_Line, "ref. time (existing cut)", "l");
-    pref_legend->AddEntry(P_hodo_Tref2_CUT, "multiplicity=1", "l");
-    pref_legend->Draw();
-    
-    shms_REF_Canv->cd(2);
-    gPad->SetLogy();
-    P_DC_Tref[0]->GetXaxis()->SetTitle("DC Ref. Time [Channel]"); 
-    P_DC_Tref[0]->GetXaxis()->SetNdivisions(6); 
-    for(Int_t iref=0; iref<10; iref++)
-      {
-	P_DC_Tref_CUT[iref]->SetLineColor(kRed);
-	
-	P_DC_Tref[iref]->Draw("sames");
-	P_DC_Tref_CUT[iref]->Draw("sames");
-      }
-    pDCREF_Line->SetLineColor(kBlue);
-    pDCREF_Line->SetLineStyle(2);
-    pDCREF_Line->SetLineWidth(3);
-    pDCREF_Line->Draw();
-    
-    shms_REF_Canv->cd(3);
-    gPad->SetLogy();
-    P_FADC_Tref_CUT->SetLineColor(kRed);
-    P_FADC_Tref->GetXaxis()->SetTitle("FADC Ref. Time [Channel]"); 
-    P_FADC_Tref->Draw();
-    P_FADC_Tref_CUT->Draw("sames"); 
-    pFADC_Line->SetLineColor(kBlue);
-    pFADC_Line->SetLineStyle(2);
-    pFADC_Line->SetLineWidth(3);
-    pFADC_Line->Draw();
-    
-    shms_REF_Canv->SaveAs(Form("Time_cuts_refTime%d/SHMS/refTime/shms_REFTime_cuts.pdf", run));
-
-    //Write REF TIME Histograms to ROOT file
-    outROOT->Write();
-    outROOT->Close();
-
- 
-  }
-
-  else if(set_refTimes && singles) {
-    
-    //-------Reference Time Histograms----------
-    
-    //HMS
-    hms_REF_Canv = new TCanvas("REF Times", "HMS REF TIMES",  1500, 500);
-    hms_REF_Canv->Divide(3,1);
-
-
-    hhod_trefcut = read_ref_times("HMS", "hhodo_tdcrefcut");
-    hdc_trefcut  = read_ref_times("HMS", "hdc_tdcrefcut");
-    hadc_trefcut = read_ref_times("HMS", "hhodo_adcrefcut");
-    
-    hT1_Line = new TLine(abs(hhod_trefcut), 0,  abs(hhod_trefcut), H_hodo_Tref->GetMaximum());
-    hDCREF_Line = new TLine(abs(hdc_trefcut), 0,  abs(hdc_trefcut), H_DC_Tref[0]->GetMaximum());
-    hFADC_Line = new TLine(abs(hadc_trefcut), 0,  abs(hadc_trefcut), H_FADC_Tref->GetMaximum());
-    
-    hms_REF_Canv->cd(1);
-    gPad->SetLogy();
-    auto href_legend = new TLegend(0.1, 0.7, 0.6, 0.9);
-    
-    H_hodo_Tref_CUT->SetLineColor(kRed);
-    H_hodo_Tref->GetXaxis()->SetTitle("Hodo Ref. Time [Channel]");
-    H_hodo_Tref->Draw();
-    H_hodo_Tref_CUT->Draw("sames");
-    hT1_Line->SetLineColor(kBlue);
-    hT1_Line->SetLineStyle(2);
-    hT1_Line->SetLineWidth(3);
-    hT1_Line->Draw();
-    href_legend->AddEntry(hT1_Line, "ref. time cut (existing cut)", "l");
-    href_legend->AddEntry(H_hodo_Tref_CUT, "multiplicity=1", "l");
-
-    href_legend->Draw();
-    
-    hms_REF_Canv->cd(2);
-    gPad->SetLogy();
-    H_DC_Tref_CUT[0]->SetLineColor(kRed);
-    H_DC_Tref[0]->GetXaxis()->SetTitle("DC Ref. Time [Channel]");
-    H_DC_Tref[0]->GetXaxis()->SetNdivisions(6);
-    H_DC_Tref[0]->Draw();
-    H_DC_Tref_CUT[0]->Draw("sames");
-    H_DC_Tref[1]->Draw("sames");
-    H_DC_Tref[2]->Draw("sames");
-    H_DC_Tref[3]->Draw("sames");
-    hDCREF_Line->SetLineColor(kBlue);
-    hDCREF_Line->SetLineStyle(2);
-    hDCREF_Line->SetLineWidth(3);
-    hDCREF_Line->Draw();
-    
-    hms_REF_Canv->cd(3);
-    gPad->SetLogy();
-    H_FADC_Tref_CUT->SetLineColor(kRed);
-    H_FADC_Tref->GetXaxis()->SetTitle("FADC Ref. Time [Channel]");
-    H_FADC_Tref->Draw();
-    H_FADC_Tref_CUT->Draw("sames");
-    hFADC_Line->SetLineColor(kBlue);
-    hFADC_Line->SetLineStyle(2);
-    hFADC_Line->SetLineWidth(3);
-    hFADC_Line->Draw();
-    
-    hms_REF_Canv->SaveAs(Form("Time_cuts_refTime%d/HMS/refTime/hms_REFTime_cuts.pdf", run));
-    
-    
-    //SHMS
-    shms_REF_Canv = new TCanvas("REF Times", "SHMS REF TIMES",  1500, 500);
-    shms_REF_Canv->Divide(3,1);
-
-    phod_trefcut = read_ref_times("SHMS_singles", "phodo_tdcrefcut");
-    pdc_trefcut  = read_ref_times("SHMS_singles", "pdc_tdcrefcut");
-    padc_trefcut = read_ref_times("SHMS_singles", "phodo_adcrefcut");
     
     
     pT2_Line = new TLine(abs(phod_trefcut), 0,    abs(phod_trefcut), P_hodo_Tref2->GetMaximum());

@@ -10,8 +10,6 @@
 *.pdf
 .nfs*
 *.root
-*.err
-*.log
 
 !runplan/*.pdf
 !code_development/commissioning_data/pm80/*.root
