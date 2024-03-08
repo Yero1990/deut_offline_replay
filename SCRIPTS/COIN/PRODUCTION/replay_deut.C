@@ -20,7 +20,7 @@ void replay_deut(Int_t RunNumber = 0, Int_t MaxEvent = 0, TString ftype="") {
     cin >> MaxEvent;
     if(MaxEvent == 0) {
       cerr << "...Invalid entry\n";
-      exit;
+      //exit;
     }
   }
   
@@ -29,7 +29,7 @@ void replay_deut(Int_t RunNumber = 0, Int_t MaxEvent = 0, TString ftype="") {
     cin >> ftype;
     if(ftype==""){
       cerr << "...Invalid file type\n";
-      exit;
+      //exit;
     }
   }
   

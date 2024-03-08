@@ -9,8 +9,15 @@ t_coin_adc_tdc_offset = 200.
 t_coin_tdcchanperns = 0.09766
 eHadCoinTime_Offset = 0.
 
-t_coin_trig_tdcrefcut = -4600.
-t_coin_trig_adcrefcut = -5600.
+;t_coin_trig_tdcrefcut = -4600.
+;t_coin_trig_adcrefcut = -5600.
+
+;t_coin_trig_tdcrefcut = -6000
+;t_coin_trig_adcrefcut = -7000
+
+t_coin_trig_tdcrefcut = -5000
+t_coin_trig_adcrefcut = -3500
+
 
 ;NOTE: pTRIG1_ROC1, pTRIG4_ROC1, pTRIG1_ROC2, pTRIG4_ROC2 (tdcTimeRaw),  are hard-coded in THcTrigDet.cxx class
 ;      These varibles and their indices are used for the coincidence time calculation, and should NOT change here.
@@ -23,6 +30,8 @@ t_coin_trig_adcrefcut = -5600.
 ; t_coin_trigNames="pTRIG2_ROC1 pTRIG3_ROC1 pTRIG2_ROC2 pTRIG3_ROC2"                                                                                                    
 ; Use this set for Deuteron 2023 pTRIG1 (SHMS 3/4), pTRIG3 (HMS 3/4)                                                                                                                                     
 t_coin_trigNames="pTRIG1_ROC1 pTRIG3_ROC1 pTRIG1_ROC2 pTRIG3_ROC2"                                                                                                    
+
+; Gema: Important channels: pTRIG1_ROC1(28) pTRIG3_ROC1(30) pTRIG1_ROC2(59) pTRIG3_ROC2(61)
 
 ; raw channels
 ; bar num:           1     2     3     4      5     6     7   8        9           10    11     12     13        14            15         16         17       18       19

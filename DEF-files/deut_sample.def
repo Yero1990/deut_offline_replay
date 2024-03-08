@@ -4,6 +4,11 @@ block g.*
 block CTime.epCoinTime_ROC*
 block T.coin.pTRIG*
 block T.coin.pEDTM*
+block T.coin.pT*
+block T.coin.hT*
+block T.coin.*DCREF*
+block T.coin.*TREF*
+
 #block RFTime.* 
 
 block H.kin.*

@@ -1,68 +1,8 @@
-; Cosmic flag for beta calculation
+; SHMS Hodoscope Parameter File Containing TimeWindow Min/Max Cuts 
+ 
+ 
+ 
 
-pcosmicflag=0
-
-; for now manually set hte FADC mode
-;  1 == Use the pulse int - pulse ped
-;  2 == Use the sample integral - known ped
-;  3 == Use the sample integral - sample ped
-; if not set then defaults to use the raw pulse integral
-phodo_adc_mode=1
-
-; Set ptofusinginvadc=0 to use new hodo calibration parameters
-ptofusinginvadc=0
-
-; pstart_time_center center of allowed time window                             
-; pstart_time_center = 32.
-; following MKJ suggestion, based on P.hod.{1,1y,2x,2y}.fptime
-pstart_time_center = 88.  
-
-; hstart_time_slop    1/2 width of time window                                  
-pstart_time_slop = 100.                                                       
-
-; pscin_tdc_min min/max P.hod.GoodPos(Neg)TdcTimeUnCorr
-; note that the params below are factor of 10 higher than
-; what is present in the respective leaf 
-;pscin_tdc_min = -1000
-;pscin_tdc_max = 2000
-
-; uncorrected hodo times [units of channel] init spring 2023
-; suggested by MKJ, based in Good{Pos,Neg}TdcUnCorr Hodo times / 0.09766 ns
-pscin_tdc_min = 0.
-pscin_tdc_max = 2000.
-
-; pscin_tdc_to_time   scin tdc time per channel                                 
-pscin_tdc_to_time = 0.09766
-
-; tof and you figured out good values
-;ptof_tolerance = 10.0
-
-; tof suggested by MKJ Nov 06, 2022
-ptof_tolerance = 2.0
-                                                                               
-; shms_tof_params                                                              
-; pnum_scin_counters, phodo_zpos, phodo_center_coord, phodo_width               
-; are all calculated within p_init_scin                                         
-;    phodo_pos_coord and phodo_neg_coord are not yet used                                                                                                    
-phodo_slop = 2.,  2.,  4.,  4.    
-
-; phodo_tdc_offset is array of time offsets for all paddles in a plane
-;   to move the tdc after reference time subtraction to between 0 and 4000 channels.
-;phodo_tdc_offset = 1860, 2000, 2060, 2000
-phodo_tdc_offset = 2000, 2000, 2000, 2000
-
-; phodo_adc_tdc_offset is array of time offsets for all paddles in a plane
-;   to move the ADC pulse time after reference time subtraction to a reasonable time (ns).
-phodo_adc_tdc_offset = 200., 200., 200., 200.
-
-
-; SHMS Hodoscope TimeWindow Min/Max Cuts (determined from CaFe H(e,e'p) replay run 16962)
-
-; variables = P.hod.(1x, 1y, 2x, 2y).GoodNeg(Pos)AdcTdcDiffTime
-
-;Gema10/20/2023: changed [-200,200] --> [-100,100]
-
-;Gema11/15/2023:NEW params
 ;                              1x                 1y              2x              2y 
 phodo_PosAdcTimeWindowMin = -25,             -25,             -25,        -3.6e+02
                           -25.00,          -25.00,          -25.00,          -95.00
@@ -84,7 +24,7 @@ phodo_PosAdcTimeWindowMin = -25,             -25,             -25,        -3.6e+
                             0.00,            0.00,            0.00,           -5.00
                             0.00,            0.00,            0.00,         -535.00
                             0.00,            0.00,            0.00,         -535.00
-                            0.00,            0.00,            0.00,         -115.00
+                            0.00,            0.00,            0.00,           35.00
 
 ;                              1x                 1y              2x              2y 
 phodo_PosAdcTimeWindowMax = 55.00,           55.00,           55.00,         -285.00

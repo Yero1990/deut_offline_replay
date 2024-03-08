@@ -25,5 +25,5 @@ pngcer_adc_tdc_offset   =  200.0
 pngcer_PedDefault= 2059, 0, 2137, 1932
 
 ; cut variable is P.ngcer.goodAdcTdcDiffTime (determined from CaFe 50k replay run 16026) 
-pngcer_adcTimeWindowMin = -500.0, -500.0, -500.0, -500.0
-pngcer_adcTimeWindowMax =  500.0,  500.0,  500.0,  500.0
+pngcer_adcTimeWindowMin = -100.0, -100.0, -100.0, -100.0
+pngcer_adcTimeWindowMax =  100.0,  100.0,  100.0,  100.0

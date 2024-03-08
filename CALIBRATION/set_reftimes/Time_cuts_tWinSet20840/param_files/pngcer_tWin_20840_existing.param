@@ -1,0 +1,7 @@
+; SHMS Noble Gas Cer  Parameter File Containing TimeWindow Min/Max Cuts 
+ 
+ 
+ 
+
+pngcer_adcTimeWindowMin = -1e+02, -100.00, -100.00, -100.00, 
+pngcer_adcTimeWindowMax = 100.00, 100.00, 100.00, 100.00, 

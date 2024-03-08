@@ -7,11 +7,11 @@ replay=$3
 
 if [ -z "$1" ] || [ -z "$2" ]; then             
     echo ""                                                                                                                             
-    echo ":=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:"                                                                              
+    echo ":=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:"                                                                              
     echo ""                                                                                                                                
-    echo "Usage:  ./set_timewin.sh <run_number> <evt_number>"                                                
+    echo "Usage:  ./set_timewin.sh <run_number> <evt_number> <replay(optional)>"                                                
     echo ""                                                                                                        
-    echo ":=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:"    
+    echo ":=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:=:"    
     
     exit 0        
 fi
@@ -23,18 +23,22 @@ debug=1
 # Which analysis file type are we doing? 
 ana_type="timewin"
 
-# this rootfile name pattern assumes pattern defined in replay_deut.C script (please do NOT modify replay script) 
-filename="../../ROOTfiles/${ana_type}/deut_replay_${ana_type}_${runNum}_${evtNum}.root"
+# Set analysis directory to local directory
+analysis_home="../.."
 
-replay_script="SCRIPTS/COIN/PRODUCTION/replay_deut.C"
-analysis_script="scripts/set_reftimes.C"
+# this rootfile name pattern assumes pattern defined in replay_deut.C script (please do NOT modify replay script) 
+filename="${analysis_home}/ROOTfiles/${ana_type}/deut_replay_${ana_type}_${runNum}_${evtNum}.root"
+
+replay_script="${analysis_home}/SCRIPTS/COIN/PRODUCTION/replay_deut.C"
+analysis_script="${analysis_home}/CALIBRATION/set_reftimes/scripts/set_reftimes.C"
 
 runHcana="./hcana -q \"${replay_script}(${runNum}, ${evtNum}, \\\"${ana_type}\\\")\""
 runAna="root -l -q -b \"${analysis_script}(\\\"${filename}\\\", ${runNum}, \\\"${daq_mode}\\\", ${set_refTimes}, ${debug})\""   
 
 # change to top direcotry and run analyzer to produce specified ROOTfile
 if [ "${replay}" == "replay" ]; then
-    cd ../../
+    cd ${analysis_home}
+    echo running:$runHcana
     eval $runHcana
     # change back to original directory and execute analysis script
     cd CALIBRATION/set_reftimes
