@@ -10,7 +10,6 @@
 *.pdf
 .nfs*
 *.root
-*.json
 
 !runplan/*.pdf
 !code_development/commissioning_data/pm80/*.root
@@ -35,8 +34,6 @@ raw.copiedtotape
 cache
 scratch
 .vscode
-CALIBRATION/set_reftimes/output
-CALIBRATION/check_calib/output
 
 # Symbolic links
 hcana

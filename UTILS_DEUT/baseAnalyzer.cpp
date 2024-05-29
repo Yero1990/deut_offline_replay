@@ -21,7 +21,8 @@ baseAnalyzer::baseAnalyzer( int irun=-1, int ievt=-1, string mode="", string ear
     replay_type="prod";
   }
   else if(evtNum!=-1){
-    replay_type="sample"; 
+    replay_type="sample";
+    
   }
   
   //Set prefix depending on DAQ mode and electron arm (used for naming leaf variables)
@@ -2253,10 +2254,11 @@ void baseAnalyzer::ReadReport()
   else if ((analysis_cut=="deep") ){
 
     // Pm = 120 MeV requires:  3.0523 GeV, 38.63 deg
-    if( abs(hms_p-3.0523)<0.05 && ((abs(hms_angle)) - 38.63)<0.5 ) {
+    if( abs(hms_p-3.0523)<0.05 && (abs(hms_angle) - 38.63)<0.5 ) {
 
       setting="pm_120";
 
+      cout << Form("Analyzing setting %s", setting.Data()) << endl;      
       // ----- simulation expectations (for use in stats monitoring later on) ----
 
       simc_Ib=40.; // [uA]
@@ -2314,7 +2316,7 @@ void baseAnalyzer::ReadReport()
 
       Int_t exit_macro=-1;
       cout << Form("deuteron exp. setting %s ", setting.Data()) << endl;
-      cout << Form(" |%.4f - P| >=0.05 GeV/c or |%.4f - theta_p| > 0.5 deg  mis-match ", hms_p, hms_angle) << endl;
+      cout << Form(" |%.4f - P| >0.05 GeV/c or |%.4f - theta_p| > 0.5 deg  mis-match ", hms_p, hms_angle) << endl;
       cout << "between this script and standard.kinematics . . . Check HMS Momentum/Angle is set CORRECTLY in standard.kinematics file !" << endl;
       cout << "" << endl;
       cout << "Continue replay anyways . . .? ( 0: continue, 1: abort )" << endl;      

@@ -32,7 +32,7 @@
 replay_type=${0##*_}
 replay_type=${replay_type%%.sh}     
 
-HCREPLAY="/home/gvill/deuteron/deut_offline_replay"
+HCREPLAY="/work/hallc/c-deuteron/$USER/deut_offline_replay"
 echo "HCREPLAY=${HCREPLAY}"
 
 # change to top-level directory

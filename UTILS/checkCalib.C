@@ -22,62 +22,62 @@ void checkCalib(TString filename="", int run=0, TString hms_pid="", TString shms
   //INITIALIZE HISTOGRAM BINNING
   //=============================
 
-  //HMS			                        //SHMS			     
-  hxfp_nbins = 100,                 pxfp_nbins = 100;   
-  hxfp_xmin = -50,                  pxfp_xmin = -50;
-  hxfp_xmax = 50,                   pxfp_xmax = 50; 
+  //HMS			                     //SHMS			     
+  hxfp_nbins = 100,                          pxfp_nbins = 100;   
+  hxfp_xmin = -50,                           pxfp_xmin = -50;
+  hxfp_xmax = 50,                            pxfp_xmax = 50; 
 
-  hyfp_nbins = 100,                 pyfp_nbins = 100;
-  hyfp_xmin = -50,                  pyfp_xmin = -50;                                                                                               
-  hyfp_xmax = 50,                   pyfp_xmax = 50;  
+  hyfp_nbins = 100,                          pyfp_nbins = 100;
+  hyfp_xmin = -50,                           pyfp_xmin = -50;                                                                                               
+  hyfp_xmax = 50,                            pyfp_xmax = 50;  
 
-  hdelta_nbins = 100,               pdelta_nbins = 100;              
-  hdelta_xmin = -10,                pdelta_xmin = -10;                                                                                                 
-  hdelta_xmax = 10,                 pdelta_xmax = 22;        
+  hdelta_nbins = 100,                        pdelta_nbins = 100;              
+  hdelta_xmin = -10,                         pdelta_xmin = -10;                                                                                                 
+  hdelta_xmax = 10,                          pdelta_xmax = 22;        
 
-  hcalEtrkNorm_nbins = 100,         pcalEtrkNorm_nbins = 100  ;
-  hcalEtrkNorm_xmin = 0.001, 		    pcalEtrkNorm_xmin = 0.001 ;
-  hcalEtrkNorm_xmax = 2.0,   		    pcalEtrkNorm_xmax = 2.0;   
+  hcalEtrkNorm_nbins = 100,         	     pcalEtrkNorm_nbins = 100  ;
+  hcalEtrkNorm_xmin = 0.001, 		     pcalEtrkNorm_xmin = 0.001 ;
+  hcalEtrkNorm_xmax = 2.0,   		     pcalEtrkNorm_xmax = 2.0;   
 			     		   			     
-  hcalEtot_nbins = 100,      		    pcalEtot_nbins = 100;      
-  hcalEtot_xmin = 0.001,     		    pcalEtot_xmin = 0.001;     
-  hcalEtot_xmax = 3.0,	     		    pcalEtot_xmax = 3.0;	     
+  hcalEtot_nbins = 100,      		     pcalEtot_nbins = 100;      
+  hcalEtot_xmin = 0.001,     		     pcalEtot_xmin = 0.001;     
+  hcalEtot_xmax = 3.0,	     		     pcalEtot_xmax = 3.0;	     
 			     		   			     
-  hcalXtrk_nbins = 100,      		    pcalXtrk_nbins = 100;      
-  hcalXtrk_xmin = -50, 	     		    pcalXtrk_xmin = -50; 	     
-  hcalXtrk_xmax = 50,  	     		    pcalXtrk_xmax = 50;  	     
+  hcalXtrk_nbins = 100,      		     pcalXtrk_nbins = 100;      
+  hcalXtrk_xmin = -50, 	     		     pcalXtrk_xmin = -50; 	     
+  hcalXtrk_xmax = 50,  	     		     pcalXtrk_xmax = 50;  	     
   			     		     			     
-  hcalYtrk_nbins = 100,      		    pcalYtrk_nbins = 100;      
-  hcalYtrk_xmin = -50, 	     		    pcalYtrk_xmin = -50; 	     
-  hcalYtrk_xmax = 50, 	     		    pcalYtrk_xmax = 50; 	     
+  hcalYtrk_nbins = 100,      		     pcalYtrk_nbins = 100;      
+  hcalYtrk_xmin = -50, 	     		     pcalYtrk_xmin = -50; 	     
+  hcalYtrk_xmax = 50, 	     		     pcalYtrk_xmax = 50; 	     
   			     		     			     
-  hdcTime_nbins = 300,	     		    pdcTime_nbins = 300;	     
-  hdcTime_xmin = -50.,	     		    pdcTime_xmin = -50.;	     
-  hdcTime_xmax = 250.,	     		    pdcTime_xmax = 250.;	     
+  hdcTime_nbins = 300,	     		     pdcTime_nbins = 300;	     
+  hdcTime_xmin = -50.,	     		     pdcTime_xmin = -50.;	     
+  hdcTime_xmax = 250.,	     		     pdcTime_xmax = 250.;	     
   			     		     			     
-  hdcRes_nbins = 100.,	     		    pdcRes_nbins = 100.;	     
-  hdcRes_xmin = -0.2,	     		      pdcRes_xmin = -0.2;	     
-  hdcRes_xmax = 0.2,	     		      pdcRes_xmax = 0.2;	     
+  hdcRes_nbins = 100.,	     		     pdcRes_nbins = 100.;	     
+  hdcRes_xmin = -0.2,	     		     pdcRes_xmin = -0.2;	     
+  hdcRes_xmax = 0.2,	     		     pdcRes_xmax = 0.2;	     
   			     		     			     
-  hdcDist_nbins = 50.,	     		    pdcDist_nbins = 50.;	     
-  hdcDist_xmin = -0.05,	     		    pdcDist_xmin = -0.05;	     
-  hdcDist_xmax = 0.55,	     		    pdcDist_xmax = 0.55;	     
+  hdcDist_nbins = 50.,	     		     pdcDist_nbins = 50.;	     
+  hdcDist_xmin = -0.05,	     		     pdcDist_xmin = -0.05;	     
+  hdcDist_xmax = 0.55,	     		     pdcDist_xmax = 0.55;	     
 			     		   			     
-  hhodBeta_nbins = 100,	     		    phodBeta_nbins = 100;	     
-  hhodBeta_xmin = 0.3,	     		    phodBeta_xmin = 0.3;	     
-  hhodBeta_xmax = 1.6,	     		    phodBeta_xmax = 1.6;	     
+  hhodBeta_nbins = 100,	     		     phodBeta_nbins = 100;	     
+  hhodBeta_xmin = 0.3,	     		     phodBeta_xmin = 0.3;	     
+  hhodBeta_xmax = 1.6,	     		     phodBeta_xmax = 1.6;	     
   			     		     			     
-  hhodXtrk_nbins = 80,	     		    phodXtrk_nbins = 80;	     
-  hhodXtrk_xmin = -60,	     		    phodXtrk_xmin = -60;	     
-  hhodXtrk_xmax = 60,	     		      phodXtrk_xmax = 60;	     
+  hhodXtrk_nbins = 80,	     		     phodXtrk_nbins = 80;	     
+  hhodXtrk_xmin = -60,	     		     phodXtrk_xmin = -60;	     
+  hhodXtrk_xmax = 60,	     		     phodXtrk_xmax = 60;	     
 			     		   			     
-  hhodYtrk_nbins = 80,	     		    phodYtrk_nbins = 80;	     
-  hhodYtrk_xmin = -60,	     		    phodYtrk_xmin = -60;	     
-  hhodYtrk_xmax = 60,	     		      phodYtrk_xmax = 60;	     
+  hhodYtrk_nbins = 80,	     		     phodYtrk_nbins = 80;	     
+  hhodYtrk_xmin = -60,	     		     phodYtrk_xmin = -60;	     
+  hhodYtrk_xmax = 60,	     		     phodYtrk_xmax = 60;	     
   			     		     			     
-  hcer_nbins = 100,	     		        phgcer_nbins = 100,  pngcer_nbins = 100;	     
-  hcer_xmin = 0.01,	     		        phgcer_xmin = 0.01,  pngcer_xmin = 0.01;     
-  hcer_xmax = 10,           		    phgcer_xmax = 20,    pngcer_xmax = 20;        
+  hcer_nbins = 100,	     		     phgcer_nbins = 100,  pngcer_nbins = 100;	     
+  hcer_xmin = 0.01,	     		     phgcer_xmin = 0.01,  pngcer_xmin = 0.01;     
+  hcer_xmax = 10,           		     phgcer_xmax = 20,    pngcer_xmax = 20;        
 
 
   //=========================
@@ -93,6 +93,9 @@ void checkCalib(TString filename="", int run=0, TString hms_pid="", TString shms
   //TString filename = Form("../../../ROOTfiles/good_Heep_hmsElec/g%d_coin.root", run);
   //TString filename = Form("../../../ROOTfiles/good_Heep_hmsProt/hprot_kg%d.root", run);
   //TString filename = Form("../../../ROOTfiles/coin_replay_trkStudy_%d_-1.root", run);
+
+ 
+
 
   TFile *data_file = new TFile(filename.Data(), "READ");
   TTree *T = (TTree*)data_file->Get("T");
@@ -113,19 +116,19 @@ void checkCalib(TString filename="", int run=0, TString hms_pid="", TString shms
   // focal plane in [cm]
   nhxfp = "H.dc.x_fp";                          npxfp = "P.dc.x_fp"; 
   nhyfp = "H.dc.y_fp";                          npyfp = "P.dc.y_fp";  
-  nhdelta = "H.gtr.dp";                         npdelta = "P.gtr.dp";    
+  nhdelta = "H.gtr.dp";                        npdelta = "P.gtr.dp";    
 
-  nhdc_res = "H.dc.residualExclPlane";	        npdc_res = "P.dc.residualExclPlane";	     
-  nhhod_beta = "H.hod.beta";		                nphod_beta = "P.hod.beta";		     
-  nhhod_beta_notrk = "H.hod.betanotrack";       nphod_beta_notrk = "P.hod.betanotrack";    
+  nhdc_res = "H.dc.residualExclPlane";	       npdc_res = "P.dc.residualExclPlane";	     
+  nhhod_beta = "H.hod.beta";		       nphod_beta = "P.hod.beta";		     
+  nhhod_beta_notrk = "H.hod.betanotrack";      nphod_beta_notrk = "P.hod.betanotrack";    
   					       					     
-  nhcer_npesum = "H.cer.npeSum";	              nphgcer_npesum = "P.hgcer.npeSum";    npngcer_npesum = "P.ngcer.npeSum";	     
-  nhcer_npe = "H.cer.npe";		                  nphgcer_npe = "P.hgcer.npe";	        npngcer_npe = "P.ngcer.npe";	     
+  nhcer_npesum = "H.cer.npeSum";	       nphgcer_npesum = "P.hgcer.npeSum";    npngcer_npesum = "P.ngcer.npeSum";	     
+  nhcer_npe = "H.cer.npe";		       nphgcer_npe = "P.hgcer.npe";	     npngcer_npe = "P.ngcer.npe";	     
 					     					     
-  nhcal_etot = "H.cal.etot";	     	            npcal_etot = "P.cal.etot";	     	     
-  nhcal_etrknorm = "H.cal.etottracknorm"; 	    npcal_etrknorm = "P.cal.etottracknorm"; 	     
-  nhcal_xtrack = "H.cal.xtrack";	              npcal_xtrack = "P.cal.xtrack";	     
-  nhcal_ytrack = "H.cal.ytrack";                npcal_ytrack = "P.cal.ytrack";             
+  nhcal_etot = "H.cal.etot";	     	       npcal_etot = "P.cal.etot";	     	     
+  nhcal_etrknorm = "H.cal.etottracknorm"; 	       npcal_etrknorm = "P.cal.etottracknorm"; 	     
+  nhcal_xtrack = "H.cal.xtrack";	       npcal_xtrack = "P.cal.xtrack";	     
+  nhcal_ytrack = "H.cal.ytrack";               npcal_ytrack = "P.cal.ytrack";             
     
 
 

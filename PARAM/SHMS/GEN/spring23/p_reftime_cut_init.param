@@ -11,9 +11,9 @@
 
 ; init spring 2023
 pdc_tdcrefcut    =-15500.
-phodo_tdcrefcut  =-4900.
-phodo_adcrefcut  =-6000.
-pngcer_adcrefcut =-6000.
-phgcer_adcrefcut =-6000.
-paero_adcrefcut  =-6000.
-pcal_adcrefcut   =-6000.
+phodo_tdcrefcut  =-4600.
+phodo_adcrefcut  =-5600.
+pngcer_adcrefcut =-5600.
+phgcer_adcrefcut =-5600.
+paero_adcrefcut  =-5600.
+pcal_adcrefcut   =-5600.

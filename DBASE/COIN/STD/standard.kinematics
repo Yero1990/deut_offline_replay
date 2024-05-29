@@ -375,21 +375,12 @@ ppartmass = 0.000511
 16969 - 16975
 gpbeam = 10.549355                       
 gtargmass_amu = 2.014101           
-htheta_lab = -38.63
-ptheta_lab = 12.2 
-hpcentral = 3.0523
-ppcentral = 8.55
-hpartmass = 0.93827231 
-ppartmass = 0.000511 
-
-# true cafe LD2 kin (above is for testing)
-#htheta_lab = -48.30                     
-#ptheta_lab = 8.3                      
-#hpcentral = 1.820                        
-#ppcentral = 8.55                        
-#hpartmass = 0.93827231                 
-#ppartmass = 0.000511
-
+htheta_lab = -48.30                     
+ptheta_lab = 8.3                      
+hpcentral = 1.820                        
+ppcentral = 8.55                        
+hpartmass = 0.93827231                 
+ppartmass = 0.000511
 
 
 # Dummy MF Kinematics
