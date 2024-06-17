@@ -344,7 +344,7 @@ void fitHodoCalib(TString filename,Int_t runNUM,Bool_t cosmic_flag=kFALSE)
       hCer = hcer_npeSum>npcer_npeSum_low_cut;
       hDCtrk = hdc_ntrack>0.0;
       betaCut = beta>betanotrack_low_cut&& beta<betanotrack_hi_cut;
-        pid_helec = hCal&&hCer&&hDCtrk;
+      pid_helec = hCal&&hCer&&hDCtrk;
       if (cosmic_flag)  pid_helec = betaCut&&hDCtrk; 
        //Apply PID ELECTRON CUT
        
@@ -360,7 +360,7 @@ void fitHodoCalib(TString filename,Int_t runNUM,Bool_t cosmic_flag=kFALSE)
 	      for (Int_t ipmt = 0; ipmt < maxPMT[npl]; ipmt++)
 		{	        
 		  
-		  if(TdcTimeTWCorr[npl][0][ipmt] < 100. && TdcTimeTWCorr[npl][1][ipmt] < 100. && hcal_etrkNorm>0.7)
+		  if(TdcTimeTWCorr[npl][0][ipmt] < 100. && TdcTimeTWCorr[npl][1][ipmt] < 100. && hCal)
 		    {
 		      //Fill Average TW Corr TDC Time
 		      h1Hist_TWAvg[npl][ipmt]->Fill((TdcTimeTWCorr[npl][0][ipmt] + TdcTimeTWCorr[npl][1][ipmt])/2.);

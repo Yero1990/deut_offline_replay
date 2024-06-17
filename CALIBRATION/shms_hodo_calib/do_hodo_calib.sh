@@ -24,7 +24,7 @@ daq_mode="coin"
 debug=0
   
 # Which analysis file type are we doing? "hod_calib"
-ana_type="hod_calib"
+ana_type="hodcalib"
 
 # this rootfile name pattern assumes pattern defined in replay_cafe.C script (please do NOT modify replay script) 
 filename="ROOTfiles/${ana_type}/cafe_replay_${ana_type}_${runNum}_${evtNum}.root"

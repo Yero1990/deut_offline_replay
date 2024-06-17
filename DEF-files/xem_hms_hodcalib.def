@@ -1,0 +1,11 @@
+block T.hms.*hFADC_TREF_ROC1*
+block T.hms.*hT*
+
+block H.hod.*
+block H.dc.ntrack
+block H.dc.*_fp
+block H.cal.etot*
+block H.cal.etracknorm
+block H.cer.npe*
+block H.gtr.p
+block H.gtr.dp

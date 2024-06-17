@@ -14,18 +14,19 @@
 ; do not change pdelta_offset from zero, use ppcentral_offset
 pdelta_offset = 0.0;   (%)   hdelta_tar = hdelta_tar + hdelta_offset 
 
-;OPTICS_MATRIX: shms de-focused 
-pphi_offset = -0.305805927E-14
-ptheta_offset = -0.311641654E-15
+
+; relative offsets 
+ptheta_offset = -2.0e-4 ; (rad) determined from thp_calc(Eb, the, k)-thp_meas for run 16962
+pphi_offset   = 0.0 ; (rad) hxp_tar = hxp_tar + hphi_offset 
+
 
 ; The following offsets are applied to the central kinematic variables
 ;      ptheta_lab=htheta_lab + pthetacentral_offset/degree 
 
 pthetacentral_offset = 0.0
-p_oopcentral_offset = 0.0
+p_oopcentral_offset = 0.0008   ; to align Pmy
 
-;  SHMS central momentum offset determined from carbon elastic data fall 2017
-; sets ppcentral = ppcentral * ( 1. + ppcentral_offset / 100. )
-ppcentral_offset = -0.250
-;ppcentral_offset = 0
 
+; May 17, 2023: using W offset from run 16036 / 16962 
+; ppcentral = ppcentral * ( 1. + ppcentral_offset / 100. )  = 0.9979
+ppcentral_offset = -0.21

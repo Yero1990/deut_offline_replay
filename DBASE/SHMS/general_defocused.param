@@ -1,0 +1,46 @@
+#real raddeg
+raddeg=3.14159265/180
+#real cminch
+cminch=2.54
+
+; General Hall-C parameter files
+#include "PARAM/GEN/genflags.param"
+#include "PARAM/GEN/gdebug.param"
+#include "PARAM/GEN/gtarget.param"
+#include "PARAM/GEN/gbeam.param"
+#include "PARAM/GEN/gscalers.param"
+
+; General SHMS parameter files
+; Note: shmsflags.param includes spectrometer offsets and options.
+#include "PARAM/SHMS/GEN/spring23/pcana_defocused.param"
+#include "PARAM/SHMS/GEN/spring23/pdebug.param"
+#include "PARAM/SHMS/GEN/spring23/shmsflags_defocused.param"
+#include "PARAM/SHMS/GEN/spring23/ptracking_init.param"
+#include "PARAM/SHMS/GEN/spring23/p_reftime_cut_defocused.param"
+
+; SHMS default geometry parameter files
+#include "PARAM/SHMS/NGCER/pngcer_geom.param"
+#include "PARAM/SHMS/DC/pdc_geom.param"
+#include "PARAM/SHMS/HODO/phodo_geom.param"
+#include "PARAM/SHMS/HGCER/phgcer_geom.param"
+#include "PARAM/SHMS/AERO/paero_geom.param"
+#include "PARAM/SHMS/CAL/pcal_geom.param"
+
+; SHMS default cut parameter files
+#include "PARAM/SHMS/NGCER/spring23/cuts/pngcer_cuts_init.param"
+#include "PARAM/SHMS/DC/spring23/cuts/pdc_cuts_init.param"
+#include "PARAM/SHMS/HODO/spring23/cuts/phodo_cuts_init.param"
+#include "PARAM/SHMS/HGCER/spring23/cuts/phgcer_cuts_init.param"
+#include "PARAM/SHMS/AERO/paero_cuts.param"
+#include "PARAM/SHMS/CAL/spring23/cuts/pcal_cuts_init.param"
+
+; SHMS default calibration parameter files
+#include "PARAM/SHMS/NGCER/spring23/calib/pngcer_calib_init.param"
+#include "PARAM/SHMS/DC/spring23/calib/pdc_calib_init.param"
+#include "PARAM/SHMS/DC/spring23/calib/pdc_tzero_per_wire_init.param"
+#include "PARAM/SHMS/HODO/phodo_calib.param"
+#include "PARAM/SHMS/HODO/spring23/calib/phodo_TWcalib_init.param"
+#include "PARAM/SHMS/HODO/spring23/calib/phodo_Vpcalib_init.param"
+#include "PARAM/SHMS/HGCER/spring23/calib/phgcer_calib_init.param"
+#include "PARAM/SHMS/AERO/paero_calib.param"
+#include "PARAM/SHMS/CAL/spring23/calib/pcal_calib_init.param"

@@ -32,9 +32,9 @@
 replay_type=${0##*_}
 replay_type=${replay_type%%.sh}     
 
-#HCREPLAY="/work/hallc/c-deuteron/$USER/deut_offline_replay"
+=======
 HCREPLAY="../../"
-
+>>>>>>> 2e35fa49cd11c5571d2868442c0201bf92ac52ca
 echo "HCREPLAY=${HCREPLAY}"
 
 # change to top-level directory

@@ -1672,3 +1672,26 @@ hpartmass = 0.00051099
 htheta_lab = -21.0
 hpcentral = 4.1
 
+
+
+#xem defocused run                                               
+4402
+gpbeam = 10.549                                                                                                              
+gtargmass_amu = 1.00794                                                                                                             
+hpartmass = 0.000511                                                                                                             
+htheta_lab = -20.005                                                                                                             
+hpcentral = 4.0
+
+4407                                                                                 
+gpbeam = 10.549                                                                                                                  
+gtargmass_amu = 1.00794                                                                                                             
+hpartmass = 0.000511                                                                                                              
+htheta_lab = -24.975                                                                                                             
+hpcentral = 3.5
+
+4410
+gpbeam = 10.549  
+gtargmass_amu = 1.00794  
+hpartmass = 0.000511 
+htheta_lab = -35.0
+hpcentral = 2.5

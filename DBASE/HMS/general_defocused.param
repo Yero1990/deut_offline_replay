@@ -1,0 +1,43 @@
+#real raddeg
+raddeg=3.14159265/180
+#real cminch
+cminch=2.54
+
+; General Hall-C parameter files
+#include "PARAM/GEN/genflags.param"
+#include "PARAM/GEN/gdebug.param"
+#include "PARAM/GEN/gtarget.param"
+#include "PARAM/GEN/gbeam.param"
+#include "PARAM/GEN/gscalers.param"
+
+; General HMS parameter files
+; Note: hmsflags.param includes spectrometer offsets and options.
+#include "PARAM/HMS/GEN/spring23/hcana_defocused.param"
+#include "PARAM/HMS/GEN/spring23/hdebug.param"
+#include "PARAM/HMS/GEN/spring23/hmsflags_defocused.param"
+#include "PARAM/HMS/GEN/spring23/htracking_init.param"
+#include "PARAM/HMS/GEN/spring23/h_reftime_cut_defocused.param"
+
+; HMS default geometry parameter files 
+#include "PARAM/HMS/CER/hcer_geom.param"
+#include "PARAM/HMS/DC/hdc_geom.param"
+#include "PARAM/HMS/HODO/hhodo_geom.param"
+#include "PARAM/HMS/AERO/haero_geom.param"
+#include "PARAM/HMS/CAL/hcal_geom.param"
+
+; HMS default cut parameter files
+#include "PARAM/HMS/CER/spring23/cuts/hcer_cuts_init.param"
+#include "PARAM/HMS/DC/spring23/cuts/hdc_cuts_init.param"
+#include "PARAM/HMS/HODO/spring23/cuts/hhodo_cuts_init.param"
+#include "PARAM/HMS/AERO/haero_cuts_init.param"
+#include "PARAM/HMS/CAL/spring23/cuts/hcal_cuts_init.param"
+
+; HMS default calibration parameter files
+#include "PARAM/HMS/CER/spring23/calib/hcer_calib_init.param"
+#include "PARAM/HMS/DC/spring23/calib/hdc_calib_init.param"
+#include "PARAM/HMS/DC/spring23/calib/hdc_tzero_per_wire_init.param"
+#include "PARAM/HMS/HODO/hhodo_calib.param"
+#include "PARAM/HMS/HODO/spring23/calib/hhodo_TWcalib_init.param"
+#include "PARAM/HMS/HODO/spring23/calib/hhodo_Vpcalib_init.param"
+#include "PARAM/HMS/AERO/haero_calib.param"
+#include "PARAM/HMS/CAL/spring23/calib/hcal_calib_init.param"

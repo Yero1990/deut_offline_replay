@@ -132,9 +132,9 @@ void fitHodoCalib(TString filename,Int_t runNUM,Bool_t cosmic_flag=kFALSE)
   
   //ePID CUT NOTICE
   Double_t etrknrm_low_cut = 0.7;
-  Double_t npngcer_npeSum_low_cut = 0.5;
+  Double_t npngcer_npeSum_low_cut = 0.1;
   Double_t betanotrack_low_cut = 0.5;
-  Double_t betanotrack_hi_cut = 1.5;
+  Double_t betanotrack_hi_cut = 1.2;
 
   if (cosmic_flag) betanotrack_low_cut = -1.2;
   if (cosmic_flag) betanotrack_hi_cut = -.7;
@@ -1606,8 +1606,8 @@ void fitHodoCalib(TString filename,Int_t runNUM,Bool_t cosmic_flag=kFALSE)
 	  {
 	    
 	    // Get TW parameters from the standard param file that gets read by HCANA
-	    fHodoPos_c2[npl][ipad]   = GetParam("../../PARAM/SHMS/HODO/phodo_TWcalib.param", "pc2_Pos", npl, ipad, 21 );
-	    fHodoNeg_c2[npl][ipad]   = GetParam("../../PARAM/SHMS/HODO/phodo_TWcalib.param", "pc2_Neg", npl, ipad, 21 );
+	    fHodoPos_c2[npl][ipad]   = GetParam("../../PARAM/SHMS/HODO/spring23/calib/phodo_TWcalib_init.param", "pc2_Pos", npl, ipad, 21 );
+	    fHodoNeg_c2[npl][ipad]   = GetParam("../../PARAM/SHMS/HODO/spring23/calib/phodo_TWcalib_init.param", "pc2_Neg", npl, ipad, 21 );
 	    fHodo_LCoeff[npl][ipad]  = LCoeff[npl][ipad];
 	    fHodoVelFit[npl][ipad]   = phodo_velArr[npl][ipad];
 	    fHodoCableFit[npl][ipad] = phodo_cableArr[npl][ipad];
@@ -1669,7 +1669,10 @@ void fitHodoCalib(TString filename,Int_t runNUM,Bool_t cosmic_flag=kFALSE)
 		scinTrnsCoord = TrackYPos[npl];
 		scinLongCoord = TrackXPos[npl];
 	      }
-	    else { return -1; }
+	    else { //return -1;
+	      cout << "--------------------> Please tell  this not true " << endl;
+	      
+	    }
 	    
 	    // --------------------------------------------------------------
 	    

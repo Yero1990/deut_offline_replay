@@ -1,0 +1,12 @@
+block T.shms.*pFADC_TREF_ROC2*
+block T.shms.*pT*
+
+block P.hod.*
+block P.dc.ntrack
+block P.dc.*_fp
+block P.cal.etot*
+block P.cal.etracknorm
+block P.hgcer.npe*
+block P.ngcer.npe* 
+block P.gtr.p
+block P.gtr.dp

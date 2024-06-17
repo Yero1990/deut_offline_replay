@@ -25,7 +25,7 @@ void replay_deut(Int_t RunNumber = 0, Int_t MaxEvent = 0, TString ftype="") {
   }
   
   if(ftype==""){
-    cout  << "\nEnter analysis type to use (e.g., shms50k, hms50k, sample, prod): \n " << endl;
+    cout  << "\nEnter analysis type to use (e.g., shms50k, hms50k, sample, prod, hodcalib, dccalib, calcalib): \n " << endl;
     cin >> ftype;
     if(ftype==""){
       cerr << "...Invalid file type\n";

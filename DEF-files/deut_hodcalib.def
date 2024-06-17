@@ -1,16 +1,17 @@
-#block T.coin.*pFADC_TREF_ROC2*
-#block T.coin.*pT*
+block T.coin.*pFADC_TREF_ROC2*
+block T.coin.*pT*
 
 block T.coin.*hFADC_TREF_ROC1*
 block T.coin.*hT*
 
-#block P.hod.*
-#block P.dc.ntrack
-#block P.dc.*_fp
-#block P.cal.etot*
-#block P.cal.etracknorm
-#block P.hgcer.npe*
-#block P.ngcer.npe* 
+block P.hod.*
+block P.dc.ntrack
+block P.dc.*_fp
+block P.cal.etot*
+block P.cal.etracknorm
+block P.hgcer.npe*
+block P.ngcer.npe* 
+block P.gtr.p
 
 block H.hod.*
 block H.dc.ntrack
@@ -18,3 +19,4 @@ block H.dc.*_fp
 block H.cal.etot*
 block H.cal.etracknorm
 block H.cer.npe*
+block H.gtr.p
