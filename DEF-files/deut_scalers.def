@@ -1,6 +1,7 @@
 block g.*
 
 begin epics
+HALLC:p
 IBC3H00CRCUR4
 hac_bcm_average
 ibcm1
