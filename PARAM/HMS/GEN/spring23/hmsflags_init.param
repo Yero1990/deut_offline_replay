@@ -39,7 +39,8 @@ hphi_offset = 0.0
 ; hpcentral_offset = 0. 
 
 ;  ( 1. + hpcentral_offset / 100. ) = 0.9978 (determined from heep 16962)
-hpcentral_offset = -0.22
+; hpcentral_offset = -0.22
+hpcentral_offset = 0.
 
 
 ; htheta_lab=htheta_lab + hthetacentral_offset/degree 

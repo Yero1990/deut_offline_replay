@@ -16,7 +16,8 @@ pdelta_offset = 0.0;   (%)   hdelta_tar = hdelta_tar + hdelta_offset
 
 
 ; relative offsets 
-ptheta_offset = -2.0e-4 ; (rad) determined from thp_calc(Eb, the, k)-thp_meas for run 16962
+; ptheta_offset = -2.0e-4 ; (rad) determined from thp_calc(Eb, the, k)-thp_meas for run 16962
+ptheta_offset = 0.
 pphi_offset   = 0.0 ; (rad) hxp_tar = hxp_tar + hphi_offset 
 
 
@@ -24,9 +25,11 @@ pphi_offset   = 0.0 ; (rad) hxp_tar = hxp_tar + hphi_offset
 ;      ptheta_lab=htheta_lab + pthetacentral_offset/degree 
 
 pthetacentral_offset = 0.0
-p_oopcentral_offset = 0.0008   ; to align Pmy
+p_oopcentral_offset = 0.
+;p_oopcentral_offset = 0.0008   ; to align Pmy
 
 
 ; May 17, 2023: using W offset from run 16036 / 16962 
 ; ppcentral = ppcentral * ( 1. + ppcentral_offset / 100. )  = 0.9979
-ppcentral_offset = -0.21
+; ppcentral_offset = -0.21
+ppcentral_offset = 0.
