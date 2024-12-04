@@ -744,7 +744,7 @@ ppartmass = 0.000511
 
 # H(e,e'p) KIN-6 (edtm @ 10 Hz)
 20840
-gpbeam = 10.549                       
+gpbeam = 10.542                       
 gtargmass_amu =  1.00794                
 htheta_lab = -50.47                    
 ptheta_lab = 7.704                      
@@ -755,7 +755,7 @@ ppartmass = 0.000511
 
 # H(e,e'p) KIN-1 (edtm @ 10 Hz)
 20841 - 20845
-gpbeam = 10.549                       
+gpbeam = 10.542                       
 gtargmass_amu =  1.00794                
 htheta_lab = -33.344                    
 ptheta_lab = 14.153                      
@@ -766,7 +766,7 @@ ppartmass = 0.000511
 
 # H(e,e'p) KIN-2 (edtm @ 10 Hz)
 20846 - 20850
-gpbeam = 10.549                       
+gpbeam = 10.542                       
 gtargmass_amu =  1.00794                
 htheta_lab = -35.75                    
 ptheta_lab = 12.94                      
@@ -777,7 +777,7 @@ ppartmass = 0.000511
 
 # H(e,e'p) KIN-3 (edtm @ 10 Hz)
 20851 - 20857
-gpbeam = 10.549                       
+gpbeam = 10.542                       
 gtargmass_amu =  1.00794                
 htheta_lab = -38.549                    
 ptheta_lab = 11.705
@@ -788,7 +788,7 @@ ppartmass = 0.000511
 
 # H(e,e'p) KIN-4 (edtm @ 10 Hz)
 20858 - 20860
-gpbeam = 10.549                       
+gpbeam = 10.542                       
 gtargmass_amu =  1.00794                
 htheta_lab = -41.812                    
 ptheta_lab = 10.435
@@ -800,7 +800,7 @@ ppartmass = 0.000511
 
 # H(e,e'p) KIN-5 (edtm @ 10 Hz)
 20861 - 20863
-gpbeam = 10.549                       
+gpbeam = 10.542                       
 gtargmass_amu =  1.00794                
 htheta_lab = -45.667                   
 ptheta_lab = 9.125
@@ -812,7 +812,7 @@ ppartmass = 0.000511
 
 # H(e,e'p) KIN-6 (edtm @ 10 Hz)
 20864 - 20870
-gpbeam = 10.549                       
+gpbeam = 10.542                       
 gtargmass_amu =  1.00794                
 htheta_lab = -50.498                   
 ptheta_lab = 7.704
@@ -824,7 +824,7 @@ ppartmass = 0.000511
 
 # d(e,e'p) Pm=120 MeV/c (edtm @ 10 Hz)
 20871 - 20872
-gpbeam = 10.549                       
+gpbeam = 10.542                       
 gtargmass_amu = 2.014101               
 htheta_lab = -38.63                   
 ptheta_lab = 12.197
@@ -836,7 +836,7 @@ ppartmass = 0.000511
 
 # d(e,e'p) Pm=580 MeV/c (edtm @ 10 Hz)
 20873 - 20883
-gpbeam = 10.549                       
+gpbeam = 10.542                       
 gtargmass_amu = 2.014101               
 htheta_lab = -54.96                   
 ptheta_lab = 12.197
@@ -847,7 +847,7 @@ ppartmass = 0.000511
 
 # d(e,e'p) Pm=800 MeV/c (edtm @ 10 Hz)
 20884 - 20956
-gpbeam = 10.549                       
+gpbeam = 10.542                       
 gtargmass_amu = 2.014101               
 htheta_lab = -59.39                   
 ptheta_lab = 12.197
@@ -858,7 +858,7 @@ ppartmass = 0.000511
 
 # d(e,e'p) Pm=100 MeV/c (edtm @ 10 Hz)
 20957 - 21048
-gpbeam = 10.549                       
+gpbeam = 10.542                       
 gtargmass_amu = 2.014101               
 htheta_lab = -61.33                   
 ptheta_lab = 12.197
@@ -869,7 +869,7 @@ ppartmass = 0.000511
 
 # SHMS single arm luminosity scan (LD2)
 21049 - 21058
-gpbeam = 10.549                       
+gpbeam = 10.542                       
 gtargmass_amu = 2.014101               
 htheta_lab = -61.33                   
 ptheta_lab = 20.00
@@ -880,7 +880,7 @@ ppartmass = 0.000511
 
 # SHMS single arm luminosity scan (C12)
 21059 - 21063 
-gpbeam = 10.549                       
+gpbeam = 10.542                       
 gtargmass_amu = 12.0107               
 htheta_lab = -61.33                   
 ptheta_lab = 20.00
@@ -891,7 +891,7 @@ ppartmass = 0.000511
 
 # SHMS single arm luminosity scan (Al Dummy)
 21064 - 21064
-gpbeam = 10.549                       
+gpbeam = 10.542                       
 gtargmass_amu = 2.014101               
 htheta_lab = -61.33                   
 ptheta_lab = 20.00
@@ -902,7 +902,7 @@ ppartmass = 0.000511
 
 # d(e,e'p) Pm=120 MeV/c (edtm @ 10 Hz) luminosity scan
 21065 - 21075
-gpbeam = 10.549                       
+gpbeam = 10.542                       
 gtargmass_amu = 2.014101               
 htheta_lab = -38.63                   
 ptheta_lab = 12.197
@@ -913,7 +913,7 @@ ppartmass = 0.000511
 
 # d(e,e'p) Pm=580 MeV/c (edtm @ 10 Hz)  -- round2 to finish it off
 21076 - 9999999
-gpbeam = 10.549 
+gpbeam = 10.542 
 gtargmass_amu = 2.014101 
 htheta_lab = -54.96      
 ptheta_lab = 12.197                                              
