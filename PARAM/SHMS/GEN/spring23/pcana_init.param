@@ -14,7 +14,7 @@ SHMS_CentralPathLen = 18.1*100   ; 18.1 m (or 1810 cm)
 ;p_recon_coeff_filename = "DATFILES/shms_newfit_xptar_april2020.dat"
 
 ; testing (with C. Yero SHMS optics from deuteron 2018 exp)
-p_recon_coeff_filename = "DATFILES/shms_OptimizedFINAL_post3288.dat"
+;p_recon_coeff_filename = "DATFILES/shms_OptimizedFINAL_post3288.dat"
 
 ; testing (with Holly's optimized matrix for A1n/d2n)
 ;p_recon_coeff_filename = "DATFILES/hsv_fit_global.dat"
@@ -26,4 +26,4 @@ p_recon_coeff_filename = "DATFILES/shms_OptimizedFINAL_post3288.dat"
 ;p_recon_coeff_filename = "DATFILES/cafe_optics_optimized_fall22_aug14.dat"
 
 ; check: Holly's optimized matrix for CaFe (Aug 27, 2023)
-;p_recon_coeff_filename = "DATFILES/newfit_cafe4_wdelta_p9979.dat"
+p_recon_coeff_filename = "DATFILES/newfit_cafe4_wdelta_p9979.dat"
