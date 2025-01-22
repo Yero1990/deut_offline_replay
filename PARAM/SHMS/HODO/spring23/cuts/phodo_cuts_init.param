@@ -35,10 +35,11 @@ pscin_tdc_max = 2000.
 pscin_tdc_to_time = 0.09766
 
 ; tof and you figured out good values
-;ptof_tolerance = 10.0
+; Changed back by GV to try to fix odd epCoinTime on delta_+12 runs
+ptof_tolerance = 10.0
 
 ; tof suggested by MKJ Nov 06, 2022
-ptof_tolerance = 2.0
+;ptof_tolerance = 2.0
                                                                                
 ; shms_tof_params                                                              
 ; pnum_scin_counters, phodo_zpos, phodo_center_coord, phodo_width               
