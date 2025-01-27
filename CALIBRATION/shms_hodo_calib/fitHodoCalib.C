@@ -66,7 +66,7 @@ void fitHodoCalib(TString filename,Int_t runNUM,Bool_t cosmic_flag=kFALSE)
 
 
   //Create output root file where histograms will be stored
-  TFile *outROOT = new TFile(Form("CALIBRATION/shms_hodo_calib/output/HodoCalibPlots_%d.root", runNUM), "recreate");
+  TFile *outROOT = new TFile(Form("./output/HodoCalibPlots_%d.root", runNUM), "recreate");
   
   /******Define Fixed Quantities********/
   static const Int_t PLANES = 4;
@@ -1220,7 +1220,7 @@ void fitHodoCalib(TString filename,Int_t runNUM,Bool_t cosmic_flag=kFALSE)
  /************WRITE FIT RESULTS TO PARAMETER FILE***************/
  
  ofstream outPARAM;
- outPARAM.open(Form("CALIBRATION/shms_hodo_calib/output/phodo_Vpcalib_%d.param", runNUM));
+ outPARAM.open(Form("./output/phodo_Vpcalib_%d.param", runNUM));
  
  outPARAM << "; SHMS Hodoscope Parameter File Containing propagation velocities per paddle " << endl;
  outPARAM << "; and signal cable time diff. offsets per paddle " << endl;
