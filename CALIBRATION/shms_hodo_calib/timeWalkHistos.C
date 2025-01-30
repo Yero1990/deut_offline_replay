@@ -421,6 +421,8 @@ void timeWalkHistos(TString inputname, Int_t runNum, string SPEC_flg) {  //SPEC_
     // Fiducial PID cuts
     calEtotnormCut   = (calEtotnorm < calEtotnormCutVal);
     cerNpeSumCut = (cerNpeSum < cerNpeSumCutVal); // JM 31-10-21: Editing cer cuts for good event selection. Added non-zero requirement
+    // GV word of caution; make sure your run has enough electrons to pass through this run,
+    // many reasons could cause this cut to fail and you end up with empty histograms.
     //if (calEtotnormCut || cerNpeSumCut) continue;
     //if (calEtotnormCut) continue;
 

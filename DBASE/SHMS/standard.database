@@ -4,5 +4,5 @@ g_ctp_kinematics_filename = "DBASE/SHMS/standard.kinematics"
 
 #XEM defocused runs
 
-17232-17247
+17232-17383
 g_ctp_parm_filename       = "DBASE/SHMS/general_defocused.param"
