@@ -1,0 +1,28 @@
+# For optics studies
+#block g.*
+#block T.coin.*
+#block CTime*
+#block RFTime.* 
+
+#block H.cer.*
+block H.dc.*
+#block H.tr.*
+#block H.hod.*
+#block H.cal.*
+block H.gtr.*
+block H.kin.*
+#block H.rb.*
+#block H.react.*
+block H.extcor.*
+
+#block P.ngcer.*
+block P.dc.*
+#block P.tr.*
+#block P.hod.*
+#block P.hgcer.*
+#block P.cal.*
+block P.gtr.*
+block P.kin.*
+#block P.rb.*
+#block P.react.*
+block P.extcor.*

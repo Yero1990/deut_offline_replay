@@ -1,0 +1,8 @@
+./deut_offline_replay/replay_deut_prod.sh 20840 -1
+./deut_offline_replay/replay_deut_prod.sh 20868 -1
+./deut_offline_replay/replay_deut_prod.sh 20869 -1
+./deut_offline_replay/replay_deut_prod.sh 20861 -1
+./deut_offline_replay/replay_deut_prod.sh 20858 -1
+./deut_offline_replay/replay_deut_prod.sh 20851 -1
+./deut_offline_replay/replay_deut_prod.sh 20846 -1
+./deut_offline_replay/replay_deut_prod.sh 20841 -1

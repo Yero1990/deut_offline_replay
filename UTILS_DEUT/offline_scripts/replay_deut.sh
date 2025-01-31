@@ -144,11 +144,7 @@ if [ "${replay_type}" = "prod" ]; then
 	
 	# hcana command
 	echo $farm
-<<<<<<< HEAD
 	if [[ $farm == *farm* ]]; then
-=======
-	if [[ $farm == farm* ]]; then
->>>>>>> upstream/master
 		echo ""
 		echo "RUNNING ON ALMA9"
 		echo ""
@@ -198,11 +194,7 @@ if [ "${replay_type}" = "prod" ]; then
 	for run in $(cat $filename) ; do    
 
 		# hcana command 
-<<<<<<< HEAD
 		if [[ $farm == *farm* ]]; then
-=======
-		if [[ $farm == farm* ]]; then
->>>>>>> upstream/master
 			echo ""
 			echo "RUNNING ON ALMA9"
 			echo ""
@@ -283,11 +275,7 @@ else
 	fi
 	
 	# hcana command
-<<<<<<< HEAD
 	if [[ $farm == *farm* ]]; then
-=======
-	if [[ $farm == farm* ]]; then
->>>>>>> upstream/master
 		echo ""
 		echo "RUNNING ON ALMA9"
 		echo ""

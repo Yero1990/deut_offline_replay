@@ -9,8 +9,15 @@
 ; Cut is on reference time per detector.
 
 ; Spring 2023 Init Ref. Times 
-hdc_tdcrefcut=-16200.
-hhodo_tdcrefcut=-3900.
-hhodo_adcrefcut=-5600.
-hcer_adcrefcut=-5600.
-hcal_adcrefcut=-5600.
+;hdc_tdcrefcut=-16200.
+;hhodo_tdcrefcut=-3900.
+;hhodo_adcrefcut=-5600.
+;hcer_adcrefcut=-5600.
+;hcal_adcrefcut=-5600.
+
+; GV 01-27-2025: adjusted for a more forgiving ref time
+hdc_tdcrefcut=-16000.
+hhodo_tdcrefcut=-3500.
+hhodo_adcrefcut=-5000.
+hcer_adcrefcut=-5000.
+hcal_adcrefcut=-5000.

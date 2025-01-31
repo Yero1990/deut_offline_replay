@@ -325,7 +325,7 @@ void writePlots(int runNUM)
   TDirectory *PSUM = histOutFile->mkdir("Param_Summary");
   TDirectory *FSUM = histOutFile->mkdir("Fit_Summary");
   TDirectory *FSUBSUM = FSUM->mkdir("Histos");
-  TString outputpng= Form("CALIBRATION/shms_hodo_calib/Calibration_Plots/TWpng/twFit_run_%d_",runNUM);
+  TString outputpng= Form("./Calibration_Plots/TWpng/twFit_run_%d_",runNUM);
   
 
   for (UInt_t ipar = 0; ipar < nTwFitPars; ipar++) {
@@ -337,7 +337,7 @@ void writePlots(int runNUM)
     {
     for(UInt_t iside = 0; iside < nSides; iside++)
     {
-    TString outputpng= Form("CALIBRATION/shms_hodo_calib/Calibration_Plots/TWpng/twFit_run_%d",runNUM);
+    TString outputpng= Form("./Calibration_Plots/TWpng/twFit_run_%d",runNUM);
     //TW Fit summary Canvases
     FSUM->WriteObject(twFitCan[iplane][iside], "twFitCan_"+planeNames[iplane]+"_"+sideNames[iside]);
     outputpng += "_"+planeNames[iplane]+"_"+sideNames[iside]+".png";
@@ -357,7 +357,7 @@ void writePlots(int runNUM)
 void WriteFitParam(int runNUM)
 {
 
-  TString outPar_Name = Form("CALIBRATION/shms_hodo_calib/output/phodo_TWcalib_%d.param", runNUM);
+  TString outPar_Name = Form("./output/phodo_TWcalib_%d.param", runNUM);
   outParam.open(outPar_Name);
   outParam << Form(";SHMS Hodoscopes Time Walk Output Parameter File: Run %d", runNUM) << endl;
   outParam << " " << endl;
@@ -456,7 +456,7 @@ void WriteFitParam(int runNUM)
 void WriteFitParamErr(int runNUM)
 {
 
-  TString outPar_Name = Form("CALIBRATION/shms_hodo_calib/output/phodo_TWcalib_Err_%d.param", runNUM); //note could put this where ever you wanted to
+  TString outPar_Name = Form("./output/phodo_TWcalib_Err_%d.param", runNUM); //note could put this where ever you wanted to
   outParam.open(outPar_Name);
   Double_t c2err[nPlanes][nSides][nBarsMax] = {0.};
   //Fill 3D Par array
@@ -594,7 +594,7 @@ void timeWalkCalib(TString inputname, Int_t runNum) {
   //histoFile->Close();
  
   // NH 25/03/2021 - Create Root File for output plots
-  TString histOutFileName = Form("CALIBRATION/shms_hodo_calib/output/timeWalkCalib_%d.root", runNum);
+  TString histOutFileName = Form("./output/timeWalkCalib_%d.root", runNum);
   histOutFile = new TFile(histOutFileName, "RECREATE");
   //make sure current file is output file
   gFile = histOutFile;
