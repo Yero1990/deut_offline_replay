@@ -97,14 +97,17 @@ bcm_calib(){
 
  //Fall 2021 run:
   //  cout << "Fall 2021 run:" << endl;
-  cout << "ranges_12Sept2021_11988.txt" << endl; 
-  cout << "ranges_12Sept2021_11988_5to45muA.txt" << endl; 
-  cout << "ranges_6Oct2021_12496.txt" << endl; 
-  cout << "ranges_6Oct2021_12496_5to40muA.txt" << endl; 
-  cout << "ranges_28Oct2021_12880.txt" << endl;
-  cout << "ranges_28Oct2021_12880_5to40muA.txt" << endl;
-  cout << "ranges_15Nov2021_13282.txt" << endl;
-  cout << "ranges_15Nov2021_13282_5to40muA.txt" << endl;
+  //cout << "ranges_12Sept2021_11988.txt" << endl; 
+  //cout << "ranges_12Sept2021_11988_5to45muA.txt" << endl; 
+  //cout << "ranges_6Oct2021_12496.txt" << endl; 
+  //cout << "ranges_6Oct2021_12496_5to40muA.txt" << endl; 
+  //cout << "ranges_28Oct2021_12880.txt" << endl;
+  //cout << "ranges_28Oct2021_12880_5to40muA.txt" << endl;
+  //cout << "ranges_15Nov2021_13282.txt" << endl;
+  //cout << "ranges_15Nov2021_13282_5to40muA.txt" << endl;
+
+  //Jan 2023 run 20277:
+  cout << "CALIBRATION/bcm_calib/ranges_20277.txt" << endl;
 
   cin >> filename_ranges;
   std::vector<Double_t> r1,r2;
@@ -159,7 +162,7 @@ bcm_calib(){
     //  TFile *f = new TFile(Form("shms_replay_production_%d_latest.root",coin_run_NUM),"READ"); // %d : expects integer; %f expects float 
   // TFile *f = new TFile(Form("shms_replay_production_%d_latest.root",shms_run_NUM),"READ"); // %d : expects integer; %f expects float 
   // TFile *f = new TFile(Form("shms_replay_production_default_%d_-1.root",shms_run_NUM),"READ"); // %d : expects integer; %f expects float 
-   TFile *f = new TFile(Form("PROD_ROOTFILEs/cafe_replay_prod_%d_-1.root",coin_run_NUM),"READ"); // %d : expects integer; %f expects float 
+   TFile *f = new TFile(Form("ROOTfiles/scalers/deut_shms_replay_scalers_%d_-1.root",coin_run_NUM),"READ"); // %d : expects integer; %f expects float 
   // TFile *f = new TFile(Form("coin_replay_scalers_%d_-1.root",coin_run_NUM),"READ"); // %d : expects integer; %f expects float 
 
 
