@@ -21,28 +21,28 @@
 #include<math.h>
 using namespace std;
 
-void set_bcm_ranges(TString basename="none",Int_t nrun=16432) {
- gROOT->Reset();
- gStyle->SetOptStat(0);
- gStyle->SetOptFit(11);
- gStyle->SetTitleOffset(1.,"Y");
- gStyle->SetTitleOffset(.7,"X");
- gStyle->SetLabelSize(0.04,"XY");
- gStyle->SetTitleSize(0.06,"XY");
- gStyle->SetPadLeftMargin(0.14);
-   TFile *fsimc;
-    TString inputroot;
-    inputroot="PROD_ROOTFILEs/cafe_replay_prod_16432_-1.root";
-     cout << " infile root = " << inputroot << endl;
-   fsimc =  new TFile(inputroot);
+void set_bcm_ranges(TString basename="none",Int_t nrun=20277) {
+  gROOT->Reset();
+  gStyle->SetOptStat(0);
+  gStyle->SetOptFit(11);
+  gStyle->SetTitleOffset(1.,"Y");
+  gStyle->SetTitleOffset(.7,"X");
+  gStyle->SetLabelSize(0.04,"XY");
+  gStyle->SetTitleSize(0.06,"XY");
+  gStyle->SetPadLeftMargin(0.14);
+  TFile *fsimc;
+  TString inputroot;
+  inputroot="ROOTfiles/scalers/deut_shms_replay_scalers_20277_-1.root";
+  cout << " infile root = " << inputroot << endl;
+  fsimc =  new TFile(inputroot);
   TTree *tsimc = (TTree*) fsimc->Get("TSP");
- Double_t  Unser;
-   tsimc->SetBranchAddress("P.Unser.scalerRate",&Unser);
- Double_t  Time;
-   tsimc->SetBranchAddress("P.1MHz.scalerTime",&Time);
-   //
-   Double_t hmax=1000000;
-   TH2F *hUnser_Time = new TH2F("hUnser_Time",Form("Run %d ;   ; )",nrun),3000,0,6000, 1000,0,hmax);
+  Double_t  Unser;
+  tsimc->SetBranchAddress("P.Unser.scalerRate",&Unser);
+  Double_t  Time;
+  tsimc->SetBranchAddress("P.1MHz.scalerTime",&Time);
+  //
+  Double_t hmax=1000000;
+  TH2F *hUnser_Time = new TH2F("hUnser_Time",Form("Run %d ;   ; )",nrun),3000,0,8000, 1000,0,hmax);
    //
 Long64_t nentries = tsimc->GetEntries();
 
